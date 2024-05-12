@@ -19,11 +19,11 @@ export const Sider = () => {
           <a href='#'><DAPAT/></a>
         </div>        
         <div className='inner-content'>
-            <div className='Dashboard'>
+            <div>
               <IconDashboard />
               <p>Dashboard</p>
             </div>
-            <div className='Calender'>
+            <div>
               <IconCalender />
               <p>Lịch</p>
             </div>
@@ -31,11 +31,11 @@ export const Sider = () => {
               <IconKPI />
               <p>KPIs</p>
             </div>
-            <div className='Target'>
+            <div>
               <IconObj />
               <p>Mục tiêu</p>
             </div>
-            <div className='Setting'>
+            <div>
               <IconSetting />
               <p>Cài đặt</p>
             </div>

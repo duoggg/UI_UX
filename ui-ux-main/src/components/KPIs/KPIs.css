@@ -132,17 +132,12 @@ body {
 h3 {
   width: 10%;
 }
-.arrow {
-width: 10px;
-height: 10px;
-background-color: #16871a;
-}
 
 .kpi-details {
   padding-right: 15px;
   margin-top: 10px;
   display: flex;  
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -154,4 +149,10 @@ background-color: #16871a;
   box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.24);
   flex: 0 0 30%; 
   box-sizing: border-box;
+}
+
+.arrow {
+width: 10px;
+height: 10px;
+background-color: #16871a;
 }

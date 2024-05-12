@@ -1,15 +1,31 @@
-import Header from './components/Header';
-import Sider from './components/Sider';
+import React from 'react';
+import Sider from '../Sider';
+import Header from '../Header';
 import './KPIs.css';
 import { 
-
   IconCalender,
+} from '../../assets/index';
 
-} from './assets/index';
-import React, { reactUseState, useState } from 'react';
+class KPIs extends React.Component {
+    constructor(props) {
+    super(props);
+    this.state = {
+      showDetails: {},
+      currentSlide: 0,
+    };
+  }
 
-function KPIs() {
-  const kpis = [
+  toggleDetails = (kpiIndex) => {
+    this.setState((prevState) => ({
+      ...prevState,
+      showDetails: {
+        ...prevState.showDetails,
+        [kpiIndex]: !prevState.showDetails[kpiIndex],
+      },
+    }));
+  };
+    render() {
+        const kpis = [
     {
       title: 'GPA 4.0',
       startDate: '03/03/23',
@@ -110,18 +126,11 @@ function KPIs() {
         // }
       ]
     },];
-  const [showDetails, setShowDetails] = useState({}); // Lưu trữ trạng thái hiển thị chi tiết cho mỗi mục tiêu
-
-  // Hàm xử lý click vào mũi tên
-  const toggleDetails = (kpiIndex) => {
-    setShowDetails((prevState) => ({ ...prevState, [kpiIndex]: !prevState[kpiIndex] }));}
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-    return (
-    <>
-      <Sider />
-      {<Header title={"KPIs"}/>}
-      <br></br>
+        return(
+            <>
+            <Sider/>
+            {<Header title={"KPIs"}/>}
+            <br></br>
       <br></br>
       <br></br>
 
@@ -138,7 +147,7 @@ function KPIs() {
                 <div>
                 {kpi.tags.map((tag, tagIndex) => (
                   <span key={tagIndex} className="kpi-tag">{tag}</span>
-                ))}</div><div className="arrow" onClick={() => toggleDetails(index)}></div>
+                ))}</div><div className="arrow" onClick={() => this.toggleDetails(index)}></div>
               </div>
               <div className="kpi-content">
               <h3>{kpi.title}</h3>
@@ -156,9 +165,9 @@ function KPIs() {
               </div>
 
               </div>
-              {showDetails[index] && (
+              {this.state.showDetails[index] && (
               <div className="kpi-details">
-                {kpi.details.slice(currentSlide * 3, (currentSlide + 1) * 3).map((detail) => (
+                {kpi.details.slice(this.state.currentSlide * 3, (this.state.currentSlide + 1) * 3).map((detail) => (
                   <div className="detail-item" key={detail.name}>
                     <h4>{detail.name}</h4>
                     <p>Mục tiêu: {detail.targetHours} giờ</p>
@@ -171,9 +180,10 @@ function KPIs() {
             </div>
           ))}
         </div>
-    </>
-    
-  );
+            </>
+        )
+        
+    }
 }
 
 export default KPIs;
