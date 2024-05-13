@@ -31,9 +31,9 @@ export const Sider = () => {
               <IconKPI />
               <p>KPIs</p>
             </div>
-            <div>
+            <div className='Task'>
               <IconObj />
-              <p>Mục tiêu</p>
+              <p>Nhiệm vụ</p>
             </div>
             <div>
               <IconSetting />

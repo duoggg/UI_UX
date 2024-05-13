@@ -12,6 +12,7 @@ class KPIs extends React.Component {
     this.state = {
       showDetails: {},
       currentSlide: 0,
+      itemsPerPage:3,
     };
   }
 
@@ -22,8 +23,21 @@ class KPIs extends React.Component {
         ...prevState.showDetails,
         [kpiIndex]: !prevState.showDetails[kpiIndex],
       },
+      currentSlide: {
+        ...prevState.currentSlide,
+        [kpiIndex]: 0,
+      }
     }));
   };
+  handleChangeSlide = (kpiIndex, newSlide) =>{
+    this.setState((prevState) => ({
+      ...prevState,
+      currentSlide: {
+        ...prevState.currentSlide,
+        [kpiIndex]: newSlide,
+      },
+    }));
+  }
     render() {
         const kpis = [
     {
@@ -78,18 +92,18 @@ class KPIs extends React.Component {
           completedHours: 100,
           Task: '130/200',
         },
-        // {
-        //   name: 'Bài tập',
-        //   targetHours: 200,
-        //   completedHours: 150,
-        //   Task: '180/200',
-        // },
-        // {
-        //   name: 'Gì gì đó',
-        //   targetHours: 200,
-        //   completedHours: 150,
-        //   Task: '180/200',
-        // }
+        {
+          name: 'Bài tập',
+          targetHours: 200,
+          completedHours: 150,
+          Task: '180/200',
+        },
+        {
+          name: 'Gì gì đó',
+          targetHours: 200,
+          completedHours: 150,
+          Task: '180/200',
+        }
       ]
 
     },
@@ -106,24 +120,24 @@ class KPIs extends React.Component {
           completedHours: 70,
           Task: '30/100',
         },
-        // {
-        //   name: 'Thực hành',
-        //   targetHours: 200,
-        //   completedHours: 100,
-        //   Task: '130/200',
-        // },
-        // {
-        //   name: 'Bài tập',
-        //   targetHours: 200,
-        //   completedHours: 150,
-        //   Task: '180/200',
-        // },
-        // {
-        //   name: 'Gì gì đó',
-        //   targetHours: 200,
-        //   completedHours: 150,
-        //   Task: '180/200',
-        // }
+        {
+          name: 'Thực hành',
+          targetHours: 200,
+          completedHours: 100,
+          Task: '130/200',
+        },
+        {
+          name: 'Bài tập',
+          targetHours: 200,
+          completedHours: 150,
+          Task: '180/200',
+        },
+        {
+          name: 'Gì gì đó',
+          targetHours: 200,
+          completedHours: 150,
+          Task: '180/200',
+        }
       ]
     },];
         return(
@@ -167,7 +181,8 @@ class KPIs extends React.Component {
               </div>
               {this.state.showDetails[index] && (
               <div className="kpi-details">
-                {kpi.details.slice(this.state.currentSlide * 3, (this.state.currentSlide + 1) * 3).map((detail) => (
+                <button  onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] - 1)} disabled={this.state.currentSlide[index] === 0} ></button>
+                {kpi.details.slice(this.state.currentSlide[index] * this.state.itemsPerPage, (this.state.currentSlide[index] + 1) * this.state.itemsPerPage).map((detail) => (
                   <div className="detail-item" key={detail.name}>
                     <h4>{detail.name}</h4>
                     <p>Mục tiêu: {detail.targetHours} giờ</p>
@@ -175,6 +190,7 @@ class KPIs extends React.Component {
                     <p>Nhiệm vụ: {detail.Task}</p>
                   </div>     
                 ))}
+                <button onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] + 1)}  disabled={this.state.currentSlide[index] === Math.ceil(kpi.details.length / this.state.itemsPerPage) - 1} ></button>
               </div>
               )}
             </div>
