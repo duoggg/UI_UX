@@ -157,3 +157,11 @@ width: 10px;
 height: 10px;
 background-color: #16871a;
 }
+
+.kpis-forcecast{
+  padding: 10px;
+  font-size: medium;
+  background-color: #FFFCE7;
+  border-radius: 5px;
+  border-width: 0.2px;
+}

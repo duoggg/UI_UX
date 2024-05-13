@@ -53,23 +53,175 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin-top: 30px;
+    margin: 50px 0;
     align-items: center;
     
 }
 
 .task-fill{
     display: flex;
-    width: 20%;
-    padding: 10px;
+    width: 30%;
+    /* padding: 10px; */
     justify-content: space-evenly;
     align-items: center;
     background-color: #FFFCE7;
+    box-shadow: 0 -4px 8px #f9f9f9, 0 4px 8px #00000026;
+    border-radius: 20px;
 }
+
+.active{
+  border: #FFFCE7;
+  background-color: #FFFCE7;
+  font-size: medium;
+  height: 100%;
+  padding: 10px;
+  width: 33.33%;
+}
+
+.active:hover{
+  box-shadow: 0 2px 2px #f9f9f9,
+  0 -2px 2px #00000026;
+}
+
 .add-task-button{
   padding: 10px;
   font-size: medium;
   background-color: #FFFCE7;
   border-radius: 5px;
-  border-width: 0.2px;
+  border: none;
+  box-shadow: 0 -4px 8px #f9f9f9, 0 4px 8px #00000026;
+}
+
+.add-task-button:hover{
+  box-shadow: 0 2px 2px #f9f9f9,
+  0 -2px 2px #00000026;
+}
+
+
+.filter {
+  display: flex;
+  align-items: center;
+  width: 25%;
+}
+
+.filter span {
+  margin-right: 10px;
+}
+
+.filter input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+  width: 100%;
+  
+}
+
+.task-list {
+}
+
+.task-category {
+  background-color: #FFFCE7;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.category-title {
+  background-color: transparent; 
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.category-controls button {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.task-items {
+  /* Style for the container of task items within a category */
+  display: flex; 
+  overflow-x: hidden; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent items from wrapping */
+  justify-content: space-evenly;
+}
+
+.task-item {
+  background-color: #FFFCE7;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 15px; 
+  flex: 0 0 300px; /* Adjust width as needed */
+  position: relative; 
+}
+
+.task-item h3 {
+  margin-top: 0;
+}
+
+.task-info {
+  align-items: center;
+  color: #555;
+  margin: 0 10px;
+}
+
+.task-priority {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+.task-priority.high {
+  background-color: #f08080; /* Light red for high priority */
+  color: white;
+}
+
+.task-priority.medium {
+  background-color: #fffacd; /* Light yellow for medium priority */
+  color: #808000;
+}
+
+.task-priority.low {
+  background-color: #90ee90; /* Light green for low priority */
+  color: #006400;
+}
+
+
+.task-actions {
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+}
+
+.task-actions .fa {
+  cursor: pointer;
+}
+
+.completed { /* Example for completed status */
+  background-color: #e0ffe0;
+}
+
+.overdue { /* Example for overdue status */
+  background-color: #ffe0e0;
+}
+
+.incomplete { /* Example for incomplete status */
+  background-color: #fff0f0;
 }

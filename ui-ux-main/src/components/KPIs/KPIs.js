@@ -192,9 +192,11 @@ class KPIs extends React.Component {
                 ))}
                 <button onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] + 1)}  disabled={this.state.currentSlide[index] === Math.ceil(kpi.details.length / this.state.itemsPerPage) - 1} ></button>
               </div>
+              
               )}
             </div>
           ))}
+          {/* <button className="kpis-forcecast"> Dự báo  </button> */}
         </div>
             </>
         )
