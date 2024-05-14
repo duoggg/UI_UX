@@ -53,7 +53,7 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin: 50px 0;
+    margin: 20px 0;
     align-items: center;
     
 }
@@ -160,7 +160,14 @@ body {
   display: flex; 
   overflow-x: hidden; /* Enable horizontal scrolling */
   white-space: nowrap; /* Prevent items from wrapping */
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
+.task-child{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 90%;
 }
 
 .task-item {
@@ -168,7 +175,7 @@ body {
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-right: 15px; 
+  margin-right: 25px; 
   flex: 0 0 300px; /* Adjust width as needed */
   height: 120px;
   /* position: relative;  */
@@ -234,12 +241,24 @@ body {
 
 .task-info-status.completed { /* Example for completed status */
   color: green ;
+  border: green 1px solid;
+  padding: 0 5px;
+  border-radius: 5px;
+  align-items: center;
 }
 
 .task-info-status.overdue { /* Example for overdue status */
   color: red;
+  border: red 1px solid;
+  padding: 0 5px;
+  border-radius: 5px;
+  align-items: center;
 }
 
 .task-info-status.incomplete { /* Example for incomplete status */
   color: gray;
+  border: gray 1px solid;
+  padding: 0 5px;
+  border-radius: 5px;
+  align-items: center;
 }

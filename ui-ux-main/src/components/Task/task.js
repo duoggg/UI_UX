@@ -7,12 +7,16 @@ class Task extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      currentSlide: {}, 
+      itemsPerPage: 3, 
       tasks: [
         {
           category: "Lý thuyết",
           items: [
             { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "completed", priority: "High", statusText:"Đã hoàn thành"  },
             { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "overdue", priority: "Medium", statusText:"Quá hạn"},
+            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
+            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
             { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
           ],
         },
@@ -25,9 +29,25 @@ class Task extends React.Component {
           ],
         },
         // Thêm danh mục nhiệm vụ khác tại đây
-      ]
+      ],
+      
     };
+    this.state.tasks.forEach((_, index) => {
+    this.state.currentSlide[index] = 0;
+  });
+  
   }
+  
+  handleChangeSlide = (categoryIndex, newSlide) => {
+  this.setState((prevState) => ({
+    ...prevState,
+    currentSlide: {
+      ...prevState.currentSlide,
+      [categoryIndex]: newSlide,
+    },
+  }));
+}
+
 
   render() {
     return (
@@ -39,7 +59,7 @@ class Task extends React.Component {
         <br />
         <div className='task-container'>
           <div className='task-header'>
-            <div className='filter'>
+            {/* <div className='filter'>
               <span>☓</span> 
               <input type="text" placeholder="Tìm kiếm theo danh mục" />
             </div>
@@ -47,7 +67,8 @@ class Task extends React.Component {
               <button className="active">Hôm nay</button>
               <button className='active' >Sắp đến hạn</button>
               <button className='active'>Quá hạn</button>
-            </div>
+            </div> */}
+            <h1>Danh sách công việc</h1>
             <button className="add-task-button">
               <span>+</span> Thêm công việc
             </button>
@@ -62,8 +83,11 @@ class Task extends React.Component {
                   </div>
                 </div>
                 <div className='task-items'>
-                    <button></button>
-                  {category.items.slice(0, 3).map((item, itemIndex) => (
+                    <button 
+                    onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] - 1)}
+                    disabled={this.state.currentSlide[index] === 0} ></button>
+                    <div className='task-child'>
+                      {category.items.slice(this.state.currentSlide[index] * this.state.itemsPerPage, (this.state.currentSlide[index] + 1) * this.state.itemsPerPage).map((item, itemIndex) => (
                     <div className={`task-item ${item.status}`} key={itemIndex}>
                       <div className='task-item-header'>
                         <h3>{item.title}</h3>
@@ -77,7 +101,11 @@ class Task extends React.Component {
                       
                     </div>
                   ))}
-                    <button></button>
+                    </div>
+                  
+                    <button 
+                    onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] + 1)}
+                    disabled={this.state.currentSlide[index] === Math.ceil(category.items.length / this.state.itemsPerPage) - 1}></button>
                 </div>
               </div>
             ))}
