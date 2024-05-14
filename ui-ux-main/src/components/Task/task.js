@@ -11,17 +11,17 @@ class Task extends React.Component {
         {
           category: "Lý thuyết",
           items: [
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "completed", priority: "High",  },
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "overdue", priority: "Medium" },
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "incomplete", priority: "High" },
+            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "completed", priority: "High", statusText:"Đã hoàn thành"  },
+            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "overdue", priority: "Medium", statusText:"Quá hạn"},
+            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
           ],
         },
         {
           category: "Giảng dạy",
           items: [
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "completed", priority: "High" },
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "overdue", priority: "Medium" },
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "incomplete", priority: "High" },
+            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "completed", priority: "High", statusText:"Đã hoàn thành"  },
+            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "overdue", priority: "Medium", statusText:"Quá hạn"},
+            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
           ],
         },
         // Thêm danh mục nhiệm vụ khác tại đây
@@ -65,13 +65,16 @@ class Task extends React.Component {
                     <button></button>
                   {category.items.slice(0, 3).map((item, itemIndex) => (
                     <div className={`task-item ${item.status}`} key={itemIndex}>
-                      <h3>{item.title}</h3>
+                      <div className='task-item-header'>
+                        <h3>{item.title}</h3>
+                        <span className={`task-priority ${item.priority.toLowerCase()}`}>{item.priority}</span>
+                        </div>
                       <div className='task-info'>
-                        <p>{item.date}</p> 
-                        <p>{item.time}</p>
-                        <p>{item.status}</p>
+                        <div>{item.date}</div> 
+                        <div>{item.time}</div>
+                        <div className={`task-info-status ${item.status.toLowerCase()}`}>{item.statusText}</div>
                       </div>
-                      <span className={`task-priority ${item.priority.toLowerCase()}`}>{item.priority}</span>
+                      
                     </div>
                   ))}
                     <button></button>

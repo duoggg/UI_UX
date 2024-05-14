@@ -60,6 +60,7 @@ body {
 
 .task-fill{
     display: flex;
+    flex-shrink: 0;
     width: 30%;
     /* padding: 10px; */
     justify-content: space-evenly;
@@ -76,6 +77,7 @@ body {
   height: 100%;
   padding: 10px;
   width: 33.33%;
+  flex-shrink: 0;
 }
 
 .active:hover{
@@ -90,6 +92,7 @@ body {
   border-radius: 5px;
   border: none;
   box-shadow: 0 -4px 8px #f9f9f9, 0 4px 8px #00000026;
+  flex-shrink: 0;
 }
 
 .add-task-button:hover{
@@ -116,8 +119,8 @@ body {
   
 }
 
-.task-list {
-}
+/* .task-list {
+} */
 
 .task-category {
   background-color: #FFFCE7;
@@ -167,17 +170,29 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-right: 15px; 
   flex: 0 0 300px; /* Adjust width as needed */
-  position: relative; 
+  height: 120px;
+  /* position: relative;  */
+  background-color: #DFFFF4;
 }
 
-.task-item h3 {
-  margin-top: 0;
+.task-item-header {
+  display: flex;
+  width: 100%;
+  align-self:center;
+  justify-content: space-between;
+}
+
+.task-item-header h3{
+  margin: 5px 0;
 }
 
 .task-info {
-  align-items: center;
-  color: #555;
+  align-items: start;
   margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  justify-content: space-between;
 }
 
 .task-priority {
@@ -189,39 +204,42 @@ body {
 }
 
 .task-priority.high {
+  margin-top: 5.5px;
+  height: 80%;
   background-color: #f08080; /* Light red for high priority */
   color: white;
 }
 
 .task-priority.medium {
+  margin-top: 5.5px;
+    height: 80%;
   background-color: #fffacd; /* Light yellow for medium priority */
-  color: #808000;
+  color: gray;
 }
 
 .task-priority.low {
+  margin-top: 5.5px;
+    height: 80%;
   background-color: #90ee90; /* Light green for low priority */
-  color: #006400;
+  color: grey;
 }
 
 
-.task-actions {
+/* .task-actions {
   position: absolute;
   top: 10px; 
   right: 10px; 
+} */
+
+
+.task-info-status.completed { /* Example for completed status */
+  color: green ;
 }
 
-.task-actions .fa {
-  cursor: pointer;
+.task-info-status.overdue { /* Example for overdue status */
+  color: red;
 }
 
-.completed { /* Example for completed status */
-  background-color: #e0ffe0;
-}
-
-.overdue { /* Example for overdue status */
-  background-color: #ffe0e0;
-}
-
-.incomplete { /* Example for incomplete status */
-  background-color: #fff0f0;
+.task-info-status.incomplete { /* Example for incomplete status */
+  color: gray;
 }

@@ -136,6 +136,7 @@ h3 {
 .kpi-details {
   padding-right: 15px;
   margin-top: 10px;
+  /* flex: 0 0 300px; */
   display: flex;  
   justify-content: space-between;
   align-items: center;

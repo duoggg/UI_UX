@@ -7,6 +7,8 @@
   display: flex;
   align-items: center;
   box-shadow: 5px 3px 8px #73827b5e;
+  position: fixed;
+  margin-left: 240px;
 }
 
 .header .inner-title p {
