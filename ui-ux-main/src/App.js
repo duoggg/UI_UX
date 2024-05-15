@@ -3,7 +3,8 @@ import Sider from './components/Sider';
 import './App.css';
 // import KPIs from './components/KPIs/KPIs';
 // import Task from './components/Task/task';
-import Setting from './components/Setting/setting';
+// import Setting from './components/Setting/setting';
+import Profile from './components/Profile/profile';
 function App() {
   return (
     <>
@@ -11,7 +12,8 @@ function App() {
       {/* {<Header title={"Header"}/>} */}
       {/* <KPIs/> */}
       {/* <Task/> */}
-      <Setting/>
+      {/* <Setting/> */}
+      <Profile/>
     </>
   );
 }
