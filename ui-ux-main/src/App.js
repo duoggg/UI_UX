@@ -1,10 +1,12 @@
 import Header from './components/Header';
 import Sider from './components/Sider';
 import './App.css';
-// import KPIs from './components/KPIs/KPIs';
-// import Task from './components/Task/task';
-// import Setting from './components/Setting/setting';
+import KPIs from './components/KPIs/KPIs';
+import Task from './components/Task/task';
+import Setting from './components/Setting/setting';
 import Profile from './components/Profile/profile';
+import Password from './components/Setting/password';
+import SettingNotifi from './components/Setting/notifi';
 function App() {
   return (
     <>
@@ -13,7 +15,7 @@ function App() {
       {/* <KPIs/> */}
       {/* <Task/> */}
       {/* <Setting/> */}
-      <Profile/>
+      <SettingNotifi/>
     </>
   );
 }

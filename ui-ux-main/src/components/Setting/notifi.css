@@ -1,0 +1,119 @@
+.notifi-container{
+    display: flex;
+    width: calc(70% - 280px); /* Chiều rộng danh sách mục tiêu, trừ đi chiều rộng sidebar */
+    margin-left: calc(15% + 240px); /* Khoảng cách so với sidebar */
+    margin-top: 50px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+.notifi-container h2{
+    margin-bottom: 50px;
+}
+.notifi-section{
+    background-color: #FFFCE7;
+    border-radius: 8px;
+    padding: 5px 30px;
+    box-shadow: 0 -4px 8px #f9f9f9, 0 4px 8px #00000026;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.notifi-content{
+    margin-top: 10px;
+    padding-bottom: 15px;
+}
+.notifi-content:last-child {
+    padding-bottom: none;
+}
+.notifi-content h4 {
+    font-size: 16px;
+    margin-top: 10px;
+  margin-bottom: 10px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin-left: auto;
+    margin-right: 40px;
+    margin-top: 19px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider.round {
+    border-radius: 34px;
+  }
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+.dropdown {
+    margin-left: auto;
+    margin-top: 18px;
+  }
+  
+.dropdown-button {
+    background-color: transparent;
+    border: #bebebe solid 1px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: auto; /* Push buttons to the right */
+    margin-right: 15px;
+    border-radius: 5px;
+    width: 100px !important;
+    height: 25px !important;
+    overflow: hidden;
+}
+  
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    margin-top: 2px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    width: 100px !important;
+    /* align-items: center; */
+}
+  
+.dropdown-button:hover {
+  border-color: black;
+  }
+.dropdown:hover .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+}
+  
+.dropdown-menu a {
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+    width: 80%;
+}
+  
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}

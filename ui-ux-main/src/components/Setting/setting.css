@@ -1,6 +1,6 @@
 
 .setting-container {
-    width: calc(100% - 280px); /* Chiều rộng danh sách mục tiêu, trừ đi chiều rộng sidebar */
+  width: calc(100% - 280px); /* Chiều rộng danh sách mục tiêu, trừ đi chiều rộng sidebar */
   margin-left: 240px; /* Khoảng cách so với sidebar */
   padding: 20px;
 }
