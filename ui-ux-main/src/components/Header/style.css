@@ -1,14 +1,13 @@
 .header { 
-  float: right; 
-  max-width: 1260px;
-  width: 100%;
+  position: relative;
+  left: 17.8%;
+  width: calc(100% - 17.8%);
   height: 94px;
   background-image: linear-gradient(to right, rgb(255, 255, 255), #009254);
   display: flex;
   align-items: center;
   box-shadow: 5px 3px 8px #73827b5e;
-  position: fixed;
-  margin-left: 240px;
+  z-index: 10;
 }
 
 .header .inner-title p {
