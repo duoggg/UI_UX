@@ -7,6 +7,7 @@ import Setting from './components/Setting/setting';
 import Profile from './components/Profile/profile';
 import Password from './components/Setting/password';
 import SettingNotifi from './components/Setting/notifi';
+import Notification from './components/Notification/notification';
 function App() {
   return (
     <>
@@ -15,7 +16,7 @@ function App() {
       {/* <KPIs/> */}
       {/* <Task/> */}
       {/* <Setting/> */}
-      <SettingNotifi/>
+      <Notification/>
     </>
   );
 }
