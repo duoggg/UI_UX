@@ -1,7 +1,13 @@
 .header { 
+<<<<<<< HEAD
+  float: right; 
+  max-width: 1300px;
+  width: 100%;
+=======
   position: relative;
   left: 17.8%;
   width: calc(100% - 17.8%);
+>>>>>>> 6698ffc7cc35e6148d0fbeaddaa1b32255d37953
   height: 94px;
   background-image: linear-gradient(to right, rgb(255, 255, 255), #009254);
   display: flex;
