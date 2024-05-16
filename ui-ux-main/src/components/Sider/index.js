@@ -13,13 +13,13 @@ import {
 export const Sider = () => {
   return (
     <>
-      <div className='container'>
+      <div className='sider'>
         <div className='inner-logo'>
           <a href='#'><Logo/></a>
           <a href='#'><DAPAT/></a>
         </div>        
         <div className='inner-content'>
-            <div>
+            <div className='inner-item'>
               <IconDashboard />
               <p>Dashboard</p>
             </div>
@@ -27,13 +27,13 @@ export const Sider = () => {
               <IconCalender />
               <p>Lịch</p>
             </div>
-            <div className='KPI'>
+            <div>
               <IconKPI />
               <p>KPIs</p>
             </div>
-            <div className='Task'>
+            <div>
               <IconObj />
-              <p>Nhiệm vụ</p>
+              <p>Mục tiêu</p>
             </div>
             <div>
               <IconSetting />

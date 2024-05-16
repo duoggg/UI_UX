@@ -46,7 +46,7 @@
   width: 600px;
   /* height: 10px; */
   margin: 0 auto;
-  transform: translate(-70px, 30px);
+  transform: translate(-70px, -10px);
 }
 
 .header {
@@ -54,10 +54,9 @@
   align-items: center;
   justify-content: center;
   height: 50px;
-  width: 740px;
   border-bottom: 1px solid #000;
   border-radius: 10px;
-  transform: translate(-235px, 20px);
+  transform: translateY(20px);
 
   /* margin-bottom: 1rem; */
   /* margin-top: 0px; */
@@ -66,7 +65,7 @@
 
 .title {
   font-size: 25px;
-  transform: translateX(-260px);
+  transform: translateX(-270px);
   font-weight: bold;
 }
 .nameDays {
