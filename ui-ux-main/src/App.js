@@ -1,7 +1,9 @@
 import Header from './components/Header';
 import Sider from './components/Sider';
+
 import './App.css';
 import KPIs from './components/KPIs/KPIs';
+import { Routes,Route } from 'react-router-dom';
 import Task from './components/Task/task';
 import Setting from './components/Setting/setting';
 import Profile from './components/Profile/profile';
@@ -15,7 +17,14 @@ function App() {
       {/* <KPIs/> */}
       {/* <Task/> */}
       {/* <Setting/> */}
-      <SettingNotifi/>
+      {/* <KPIs/> */}
+      <Routes>
+        <Route path="/" element={<Task />} />
+        <Route path="/task" element={<Task />} />
+        <Route path="/kpi" element={<KPIs />} />
+        <Route path="/setting" element={<Setting />} />
+
+      </Routes>
     </>
   );
 }

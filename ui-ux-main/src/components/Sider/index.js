@@ -1,3 +1,8 @@
+import React, { useState } from 'react';
+import { Routes,Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import KPIs from '../KPIs/KPIs';
+import Task from '../Task/task';
 import './style.css';
 import { 
   DAPAT, 
@@ -10,7 +15,17 @@ import {
   IconSignOut,
 } from '../../assets/index';
 
+
+
 export const Sider = () => {
+  const [activeItemIndex, setActiveItemIndex] = useState(null);
+
+  const handleItemClick = (index) => {
+    setActiveItemIndex(index);
+   
+  };
+
+ 
   return (
     <>
       <div className='container'>
@@ -19,34 +34,48 @@ export const Sider = () => {
           <a href='#'><DAPAT/></a>
         </div>        
         <div className='inner-content'>
-            <div>
+            <div 
+              className={`item ${activeItemIndex === 'dash' ? 'active1' : 'item'}`}
+              onClick={() => handleItemClick('dash')} >
               <IconDashboard />
-              <p>Dashboard</p>
+              <Link to="/kpi" className="custom-link" ><p>Dashboard</p></Link>
             </div>
-            <div>
+
+            <div className={`item ${activeItemIndex === 'cal' ? 'active1' : 'item'}`}
+              onClick={() => handleItemClick('cal')}>
               <IconCalender />
-              <p>Lịch</p>
+              <Link to="/kpi" className="custom-link" ><p>Lịch</p></Link>
             </div>
-            <div className='KPI'>
+
+            <div className={`item ${activeItemIndex === 'task' ? 'active1' : 'item'}`}
+              onClick={() => handleItemClick('task')}>
               <IconKPI />
-              <p>KPIs</p>
+              <Link to="/task" className="custom-link" ><p>Công việc</p></Link>
             </div>
-            <div className='Task'>
+
+            <div className={`item ${activeItemIndex === 'kpi' ? 'active1' : 'item'}`}
+              onClick={() => handleItemClick('kpi')}>
               <IconObj />
-              <p>Nhiệm vụ</p>
+               <Link to="/kpi" className="custom-link" ><p>KPIs</p></Link>
             </div>
-            <div>
+
+            <div className={`item ${activeItemIndex === 'setting' ? 'active1' : 'item'}`}
+              onClick={() => handleItemClick('setting')}>
               <IconSetting />
-              <p>Cài đặt</p>
+               <Link to="/setting" className="custom-link" ><p>Cài đặt</p></Link>
             </div>
-            <div className='sign-out'>
+
+            <div className={`item signout ${activeItemIndex === 'signout' ? 'active1' : 'item'}`}
+              onClick={() => handleItemClick('signout')}>
               <IconSignOut/>
-              <p>Đăng xuất</p>
+               <Link to="/kpi" className="custom-link" ><p>Đăng xuất</p></Link>
             </div>
         </div>
       </div>
+      
     </>
   );
 };
 
 export default Sider;
+
