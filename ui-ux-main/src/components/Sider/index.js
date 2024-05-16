@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-import { Routes,Route } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import KPIs from '../KPIs/KPIs';
-import Task from '../Task/task';
 import './style.css';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { 
   DAPAT, 
   Logo,
@@ -15,67 +12,91 @@ import {
   IconSignOut,
 } from '../../assets/index';
 
-
-
 export const Sider = () => {
-  const [activeItemIndex, setActiveItemIndex] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(null);
 
-  const handleItemClick = (index) => {
-    setActiveItemIndex(index);
-   
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
   };
-
- 
   return (
     <>
-      <div className='container'>
+      <div className='sider'>
         <div className='inner-logo'>
           <a href='#'><Logo/></a>
           <a href='#'><DAPAT/></a>
         </div>        
         <div className='inner-content'>
-            <div 
-              className={`item ${activeItemIndex === 'dash' ? 'active1' : 'item'}`}
-              onClick={() => handleItemClick('dash')} >
-              <IconDashboard />
-              <Link to="/kpi" className="custom-link" ><p>Dashboard</p></Link>
-            </div>
 
-            <div className={`item ${activeItemIndex === 'cal' ? 'active1' : 'item'}`}
-              onClick={() => handleItemClick('cal')}>
-              <IconCalender />
-              <Link to="/kpi" className="custom-link" ><p>Lịch</p></Link>
-            </div>
+        <Link to="/dashboard" className='link-tag'>
+            <div className={`inner-item ${selectedItem === 'item1' ? 'selected' : ''}`}
+                onClick={() => handleItemClick('item1')}>
+                  
+                  <IconDashboard />
+                  <p>Dashboard</p>
+                
+                </div>
+            </Link>
+            <Link to="/calendar" className='link-tag'>
+            <div
+                className={`inner-item ${selectedItem === 'item2' ? 'selected' : ''}`}
+                onClick={() => handleItemClick('item2')}
+              >
+                  
+                  <IconCalender />
+                  <p>Lịch</p>
+                
+                </div>
+            </Link>
 
-            <div className={`item ${activeItemIndex === 'task' ? 'active1' : 'item'}`}
-              onClick={() => handleItemClick('task')}>
+
+            <Link to="/task" className='link-tag'>
+              <div
+                className={`inner-item ${selectedItem === 'item3' ? 'selected' : ''}`}
+                onClick={() => handleItemClick('item3')}>
+              
               <IconKPI />
-              <Link to="/task" className="custom-link" ><p>Công việc</p></Link>
-            </div>
+              <p>Công việc</p>
+              
+             </div>
+            </Link>
 
-            <div className={`item ${activeItemIndex === 'kpi' ? 'active1' : 'item'}`}
-              onClick={() => handleItemClick('kpi')}>
+
+            <Link to="/kpis" className='link-tag'>
+            <div
+            className={`inner-item ${selectedItem === 'item4' ? 'selected' : ''}`}
+            onClick={() => handleItemClick('item4')}
+              >
               <IconObj />
-               <Link to="/kpi" className="custom-link" ><p>KPIs</p></Link>
+              <p>KPIs</p>
+              
             </div>
+            </Link>
 
-            <div className={`item ${activeItemIndex === 'setting' ? 'active1' : 'item'}`}
-              onClick={() => handleItemClick('setting')}>
+            <Link to="/setting" className='link-tag'>
+            <div
+            className={`inner-item ${selectedItem === 'item5' ? 'selected' : ''}`}
+            onClick={() => handleItemClick('item5')} >
+             
               <IconSetting />
-               <Link to="/setting" className="custom-link" ><p>Cài đặt</p></Link>
+              <p>Cài đặt</p>
+              
             </div>
-
-            <div className={`item signout ${activeItemIndex === 'signout' ? 'active1' : 'item'}`}
-              onClick={() => handleItemClick('signout')}>
+            </Link>
+            <Link to="/setting" className='link-tag'>
+            <div
+            className={`signout inner-item ${selectedItem === 'item6' ? 'selected' : ''}`}
+            onClick={() => handleItemClick('item6')}
+          >
+              
               <IconSignOut/>
-               <Link to="/kpi" className="custom-link" ><p>Đăng xuất</p></Link>
+              <p>Đăng xuất</p>
+             
             </div>
+            </Link>
         </div>
       </div>
-      
     </>
   );
 };
 
 export default Sider;
-

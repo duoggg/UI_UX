@@ -2,6 +2,7 @@ import React from 'react';
 import Sider from '../Sider';
 import Header from '../Header';
 import './task.css';
+import CreateGoal from './Create/create';
 
 class Task extends React.Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class Task extends React.Component {
     this.state = {
       currentSlide: {}, 
       itemsPerPage: 3, 
+      showPopup: false,
       tasks: [
         {
           category: "Lý thuyết",
@@ -48,6 +50,13 @@ class Task extends React.Component {
   }));
 }
 
+  handleAddGoal = () => {
+    this.setState({ showPopup: true });
+  };
+
+  closePopup = () => {
+    this.setState({ showPopup: false });
+  };
 
   render() {
     return (
@@ -68,12 +77,14 @@ class Task extends React.Component {
               <button className='active' >Sắp đến hạn</button>
               <button className='active'>Quá hạn</button>
             </div> */}
-            <h1>Danh sách công việc</h1>
-            <button className="add-task-button">
+            <div className='CV-title'><h1>Danh sách công việc</h1></div>
+            <button className="add-task-button" onClick={this.handleAddGoal}>
               <span>+</span> Thêm công việc
             </button>
           </div>
-          
+          {this.state.showPopup && (
+            <CreateGoal onClose={this.closePopup} />
+          )}
           <div className='task-list'>
             {this.state.tasks.map((category, index) => (
               <div className='task-category' key={index}>
@@ -83,9 +94,11 @@ class Task extends React.Component {
                   </div>
                 </div>
                 <div className='task-items'>
-                    <button 
+                    <button
                     onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] - 1)}
-                    disabled={this.state.currentSlide[index] === 0} ></button>
+                    disabled={this.state.currentSlide[index] === 0} >
+
+                    </button>
                     <div className='task-child'>
                       {category.items.slice(this.state.currentSlide[index] * this.state.itemsPerPage, (this.state.currentSlide[index] + 1) * this.state.itemsPerPage).map((item, itemIndex) => (
                     <div className={`task-item ${item.status}`} key={itemIndex}>

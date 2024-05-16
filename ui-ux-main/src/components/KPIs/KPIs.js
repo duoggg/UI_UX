@@ -5,6 +5,8 @@ import './KPIs.css';
 import { 
   IconCalender,
 } from '../../assets/index';
+import CreateGoal from './Create/create';
+import Forecast from '../Forecast/forecast';
 
 class KPIs extends React.Component {
     constructor(props) {
@@ -13,6 +15,8 @@ class KPIs extends React.Component {
       showDetails: {},
       currentSlide: 0,
       itemsPerPage:3,
+      showPopup: false,
+      showForecastPopUp : false 
     };
   }
 
@@ -38,6 +42,25 @@ class KPIs extends React.Component {
       },
     }));
   }
+
+  handleAddGoal = () => {
+    this.setState({ showPopup: true });
+  };
+
+  closePopup = () => {
+    this.setState({ showPopup: false });
+  };
+
+  handleForecast = () => {
+    this.setState({ showForecastPopUp: true });
+  };
+
+  closeForecastPopup = () => {
+    this.setState({ showForecastPopUp: false });
+  };
+
+
+
     render() {
         const kpis = [
     {
@@ -145,24 +168,31 @@ class KPIs extends React.Component {
             <Sider/>
             {<Header title={"KPIs"}/>}
             <br></br>
-      <br></br>
-      <br></br>
+            <br></br>
+            <br></br>
 
        <div className="kpis-list">
         <div className='list-header'>
-          <h1>Danh sách KPIs</h1>
-          <button className="add-kpi-button">
-            <span>+</span> Thêm mục tiêu
+          <div className='KPI-title'><h1>Danh sách KPIs</h1></div>
+          <button className="add-kpi-button" onClick={this.handleAddGoal}>
+            <span>+</span> Thêm KPI
           </button>
         </div>  
+          {this.state.showPopup && (
+            <CreateGoal onClose={this.closePopup} />
+          )}
           {kpis.map((kpi, index) => (
             <div key={index} className="kpi-item">
               <div className="kpi-header">
                 <div>
                 {kpi.tags.map((tag, tagIndex) => (
                   <span key={tagIndex} className="kpi-tag">{tag}</span>
-                ))}</div><div className="arrow" onClick={() => this.toggleDetails(index)}></div>
+                ))}</div>
+               
+                <div className="arrow" onClick={() => this.toggleDetails(index)}></div>
+                
               </div>
+               
               <div className="kpi-content">
               <h3>{kpi.title}</h3>
                 <span className="kpi-date">
@@ -180,25 +210,55 @@ class KPIs extends React.Component {
 
               </div>
               {this.state.showDetails[index] && (
+                <>
               <div className="kpi-details">
                 <button  onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] - 1)} disabled={this.state.currentSlide[index] === 0} ></button>
                 {kpi.details.slice(this.state.currentSlide[index] * this.state.itemsPerPage, (this.state.currentSlide[index] + 1) * this.state.itemsPerPage).map((detail) => (
                   <div className="detail-item" key={detail.name}>
                     <h4>{detail.name}</h4>
-                    <p>Mục tiêu: {detail.targetHours} giờ</p>
-                    <p>Đã làm: {detail.completedHours} giờ</p>
-                    <p>Nhiệm vụ: {detail.Task}</p>
+                    <div className='goal-time-container'>
+                    <div className='goal-time-0' > 
+                    <div className='goal-time-1'> Mục tiêu </div>
+                    <div className='goal-time-2'> : </div>
+                    <div className='goal-time-3'> {detail.targetHours} giờ </div>
+                    </div>
+
+                    <div className='goal-time-0' > 
+                    <div className='goal-time-1'> Đã làm </div>
+                    <div className='goal-time-2'> : </div>
+                    <div className='goal-time-3'> {detail.completedHours} giờ </div>
+                    </div>
+        
+                    <div className='goal-time-0' > 
+                    <div className='goal-time-1'>Nhiệm vụ </div>
+                    <div className='goal-time-2'> : </div>
+                    <div className='goal-time-3'> {detail.Task} giờ </div>
+                    </div>
+
+                    </div>
+                     
                   </div>     
                 ))}
-                <button onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] + 1)}  disabled={this.state.currentSlide[index] === Math.ceil(kpi.details.length / this.state.itemsPerPage) - 1} ></button>
-              </div>
               
+                <button onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] + 1)}  disabled={this.state.currentSlide[index] === Math.ceil(kpi.details.length / this.state.itemsPerPage) - 1} ></button>
+                
+              </div>
+                <div className='forecast-button-1' onClick={this.handleForecast}><p> Dự báo</p></div>
+                 {this.state.showForecastPopUp && (
+            <Forecast showForecastPopUp={this.showForecastPopUp} onClose={this.closeForecastPopup} />
+          )}
+                </>
               )}
+              
+             
             </div>
           ))}
           {/* <button className="kpis-forcecast"> Dự báo  </button> */}
         </div>
+
+       
             </>
+
         )
         
     }

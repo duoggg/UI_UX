@@ -1,0 +1,102 @@
+.create-kpi-container{
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Thêm z-index để popup ở trên cùng */
+  flex-direction: column;
+}
+
+.create-kpi-container form{
+    width: 50% !important;
+    background-color: #FFFCE7;
+    padding: 30px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 1.1rem !important;
+}
+
+.create-kpi-container form input{
+  width: 98%;
+  margin: 10px 0;
+  border: 0.1px solid hsl(0,0%,80%);
+  color: hsl(0, 0%, 20%);
+  border-radius: 4px;
+  padding: 10px 7px;
+  font-weight: 500 !important;
+}
+
+.date{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.date input{
+  width: 37.7% !important;
+  margin-right: 30% !important;
+}
+
+.date .select{
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 30% !important;
+}
+
+.category-icon {
+  cursor: pointer;
+  margin-left: 5px; /* Khoảng cách giữa label và dấu cộng */
+}
+
+.category-details {
+  display: flex;
+  margin-top: 10px; /* Khoảng cách giữa label và input */
+  font-size: 0.8rem;
+  align-items: center;
+  justify-content: space-around;  
+  flex: 1;
+}
+
+.select{
+  min-width: 40%;
+}
+
+.select input { 
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+
+.category-details input {
+  margin-bottom: 5px; /* Khoảng cách giữa các input */
+  padding: 10px 7px ;
+  width: 20% !important;
+}
+
+.task-create-button{
+  border: none !important;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 1rem;
+  margin-top: 20px;
+  width: 10%;
+}
+
+.task-create-button.Done{
+  background-color: #D74632;
+  color: white;
+  margin-left: 34.5%;
+ }
+
+.task-create-button.Close{
+  background-color: gray !important;
+  color: white !important;
+  margin-left: 10%;
+ }

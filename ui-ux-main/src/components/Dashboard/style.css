@@ -1,0 +1,195 @@
+.container {
+    width: calc(100%-17.8%);
+    overflow: hidden;
+    padding: 20px;
+    /* margin-top: 30%; */
+    padding-top: 120px;
+    margin-left: 16%;
+   }
+  
+   .container-header .inner-list {
+    max-width: calc(100% - 20px);
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+   }
+  
+   .container-header .inner-list .inner-item3 {
+   
+    width: 266px;
+     height: 145px;
+     border-radius: 10px;
+     background: linear-gradient(180deg, #4CB7D1 -121.72%, #64CEE6 49.82%, #FFF 132.41%);
+      
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+     position: relative;
+   }
+   .container-header .inner-list .inner-item1 {
+    width: 266px;
+    height: 145px;
+     border-radius: 10px;
+     background: linear-gradient(180deg, #59709B -121.72%, #A5BDEB 57.7%, #FFF 132.41%);
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+     position: relative;
+   }
+   .container-header .inner-list .inner-item2{
+      width: 266px;
+      height: 145px;
+      border-radius: 10px;
+    background:linear-gradient(180deg, #B38F33 -121.72%, #FFC535 26.95%, #FFF 132.41%);
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+     position: relative;
+   }
+  
+   .container-header .inner-list .inner-item1 h1, .inner-item2 h1, .inner-item3 h1 {
+     position: absolute;
+     top: 10px;
+     left: 20px;
+     font-size: 50px;
+   }
+  
+   .container-header .inner-list .inner-item1 .img-background, .inner-item2 .img-background, .inner-item3 .img-background {
+     position: absolute;
+     right: 0;
+     border-radius: 10px;
+   }
+  
+   .container-header .inner-list .inner-item1 p, .inner-item2 p, .inner-item3 p {
+     position: absolute;
+     bottom: 10px;
+     left: 50px;
+   }
+  
+   .container-header .inner-list .inner-item1 .img-icon, .inner-item2 .img-icon, .inner-item3 .img-icon { 
+     position: absolute;
+     bottom: 10px;
+     left: 20px;
+   }
+  
+   .container-header .inner-list .inner-item2 .icon-bg2{
+    position: absolute;
+    top: 0;
+    right: 0;
+   }
+  
+   .container-main {
+     margin-top: 20px;
+   }
+   
+   .container-main .inner-list .inner-row {
+    max-width: calc(100% - 20px);
+     display: flex;
+     align-items: center;
+     margin-bottom: 30px;
+     justify-content: space-between;
+   }
+  
+   .container-main .inner-item{
+    position: relative;     
+     width: 550px;
+     height: 320px;
+     background: #FFFCE7;
+     border-radius: 10px;
+     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3); 
+   }
+  
+   .container-main .inner-item .inner-title {
+     position: absolute;
+     top: 15px;
+     left: 15px;
+     border-radius: 5px;
+     padding: 5px 20px 5px 20px;
+     background: #D7FFDC;
+     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+     color: #000000;
+   }
+  
+   .container-main .inner-item button {
+     position: absolute;
+     right: 15px;
+     top: 20px;
+     border-radius: 50%;
+     background: hwb(6 0% 92%);      
+     color: #fff;
+     padding: 5px 8px 5px 8px;
+     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+     border: none;
+   }
+  
+   .container-main .inner-item .graph{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 540px;
+    height: fit-content;
+   }
+  
+   .container-main .inner-item .pie-chart{
+    position: absolute;
+    bottom: -54px;
+    left: 110px;
+    width: 380px;
+    height: 380px;
+  }
+  
+   .container-main .inner-item .bar-chart{
+    position: absolute;
+    bottom: -40px;
+    left: 10px;
+    width: 95%;
+    height: 95%;
+   }
+  
+   .container-main .inner-item table {
+     width: 100%;
+     margin-top: 100px;
+     margin-left: auto;
+     margin-right: auto;
+     border-collapse: collapse;
+     border-spacing: 10px;
+   }
+  
+   .container-main .inner-item th, td {
+     padding: 10px 40px 10px 40px;
+     text-align: center;
+     transition: all 0.1s;
+   }
+  
+   .container-main .inner-item td[class="view"]:hover {
+     background: rgb(136, 173, 153);
+     cursor: pointer;
+     border-radius: 30px;
+     transition: all 0.1s;
+   }
+  
+   .container-main .inner-item #column{
+     position: absolute;
+     left: 30px;
+     bottom: 10px;
+     width:100%;
+     max-width:500px
+   }
+  
+   .container-main .inner-item .ex {
+     position: absolute;
+     padding: 12px;
+     max-width: 200px;
+     width: 100%;
+     height: auto;
+     background-color: #ffffff;
+     border-radius: 10px;
+     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+     right: 25px;
+     top: 25px;      
+     opacity: 0;
+     transition: .2s;
+   }
+  
+   .container-main .inner-item button:hover ~ .ex {
+     opacity: 1;
+     transition: 0.2s;
+   }
+  
+   th, td {
+     border: 2px solid #ddd;
+   }

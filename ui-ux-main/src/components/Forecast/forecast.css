@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+.forecast-container {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Thêm z-index để popup ở trên cùng */
+  flex-direction: column;
+  
+}
+
+.container-DuBao {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1000px; 
+  width: 100%;
+  height: 700px; 
+  background: #FFFCEF; 
+  padding-left: 30px;
+  border-radius: 20px;
+  height: 720px;
+}
+
+.percent-num {
+  float: right; 
+}
+
+
+.h2 {
+  color: #081c15;
+  max-width: 233px;
+  font: 700 36px Roboto, sans-serif;
+} 
+
+.a {
+  justify-content: space-between;
+}
+/* .title{
+
+} */
+.goal-name{
+  margin-top: 0px;
+  margin-bottom: 10px;
+  display: flex;
+  color: #081C15;
+  width: 50%;
+  
+  font: 50 16px Roboto, sans-serif;
+} 
+
+.goal-circle-cate {
+  width: 100%;
+}
+
+.goal{
+  font: 50 20px Roboto, sans-serif;
+}
+
+.t1 {
+  width: 30%;
+}
+
+.t2 {
+  margin-left: 20px;
+}
+.t3 {
+  margin-left: 20px;
+}
+
+.line {
+  margin-top: 30px ;
+  width: 90%;
+  background-color: #A99EA0;
+  height: 0.2px;
+}
+
+.title-1 {
+  margin-top: 20px;
+  font: 700 15px Roboto, sans-serif;
+}
+
+.title-2 {
+  margin-top: 70px;
+  font: 700 20px Roboto, sans-serif;
+}
+.goal-name1{
+  /* margin-left: 100px; */
+  width: 2000px; /* Đặt chiều rộng theo ý muốn */
+  height: 150px; /* Đặt chiều cao theo ý muốn */
+  /* display: flex; */
+  /* background-color: #081c15; */
+
+}
+
+.goal-name1-text{
+  padding-left: 135px;
+}
+.goal-name7{
+  margin-top: 20px ;
+  width: 80%; /* Đặt chiều rộng theo ý muốn */
+  height: 200px; /* Đặt chiều cao theo ý muốn */
+  display: flex;
+  margin-left:100px ;
+  align-items: center;
+}
+.text-container-forecast {
+  padding: 20px;
+  border: 1px solid #0b0202;
+  width: 1200px; /* Đặt chiều rộng theo ý muốn */
+  height: 150px;
+  border-radius: 6px;
+  background-color: transparent;
+  letter-spacing: 1px;
+}
+ 
+
+.forecast-header{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.forecast-close-button{
+  background-color: #A99EA0;
+  padding: 5px;
+  width: 100px;
+  border-radius: 20px;
+  justify-content: center;
+  padding-left: 30px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.forecast-close-button:hover {
+  cursor: pointer;
+}
+
+

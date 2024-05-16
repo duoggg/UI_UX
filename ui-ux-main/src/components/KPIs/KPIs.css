@@ -51,6 +51,9 @@ body {
 }
 
 .list-header{
+  
+  margin-top: 40px;
+  margin-bottom: 40px;
   width: 100%; 
   display: flex;
   justify-content: space-between;
@@ -62,7 +65,9 @@ body {
   padding: 20px;
   margin-bottom: 15px;
   box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.24);
-  position: relative;
+  padding-bottom: 50px;
+  /* position: relative; */
+  
 }
 
 .kpi-tag {
@@ -113,8 +118,16 @@ body {
   font-size: medium;
   background-color: #FFFCE7;
   border-radius: 5px;
-  border-width: 0.2px;
+  border: none;
+  box-shadow: 0 -4px 8px #f9f9f9, 0 4px 8px #00000026;
+  flex-shrink: 0;
 }
+
+.add-kpi-button:hover{
+  box-shadow: 0 2px 2px #f9f9f9,
+  0 -2px 2px #00000026;
+}
+
 .kpi-content {
   display: flex;
   justify-content:space-between;
@@ -151,6 +164,8 @@ h3 {
   box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.24);
   flex: 0 0 25%; 
   box-sizing: border-box;
+  padding-top: 15px;
+  height: 140px;
 }
 
 .arrow {
@@ -165,4 +180,46 @@ background-color: #16871a;
   background-color: #FFFCE7;
   border-radius: 5px;
   border-width: 0.2px;
+}
+
+.goal-time-0 {
+  display: flex;
+  
+}
+.goal-time-1 {
+  width: 80px;
+  padding-bottom: 5px;
+}
+.goal-time-2 {
+  width: 20px;
+}
+
+.goal-time-container {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.forecast-button-1 {
+  margin-top: 25px;
+  float: right;
+  background-color: #2CC378;
+  border-radius: 20px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  width: 100px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding-top: 3px;
+  padding-left: 25px;
+}
+
+.forecast-button-1:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.KPI-title {
+  padding-left: 10px;
 }

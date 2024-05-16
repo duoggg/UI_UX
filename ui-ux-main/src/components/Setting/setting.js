@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';import Sider from '..
 import Header from '../Header';
 import './setting.css';
 import avatar from '../../assets/avatar.jpg'
+import { Link } from 'react-router-dom';
 
 
 class Setting extends React.Component {
@@ -53,7 +54,7 @@ class Setting extends React.Component {
           <h4>Đổi mật khẩu</h4>
           <p>Bạn nên sử dụng mật khẩu mình chưa từng dùng ở đâu bao giờ</p>
         </div>
-        <button className="edit-button">Chỉnh sửa</button>
+        <Link to="./pass"><button className="edit-button">Chỉnh sửa</button></Link>
       </div>
       <div className="setting-item">
         {/* Icon */}
@@ -61,7 +62,7 @@ class Setting extends React.Component {
           <h4>Hồ sơ</h4>
           <p>Chúng tôi sẽ yêu cầu mã xác nhận khi tài khoản của bạn được đăng nhập trên thiết bị lạ</p>
         </div>
-        <button className="edit-button">Chỉnh sửa</button>
+        <Link to="/profile"><button className="edit-button">Chỉnh sửa</button></Link>
       </div>
       <div className="setting-item">
         {/* Icon */}
@@ -101,7 +102,7 @@ class Setting extends React.Component {
           <h4>Thông báo</h4>
           <p>Khuyến khích bật để chúng tôi có thể hỗ trợ bạn tốt nhất</p>
         </div>
-        <button className="edit-button">Chỉnh sửa</button>
+        <Link to="./noti"><button className="edit-button">Chỉnh sửa</button></Link>
       </div>  
     </div>  
     <div className='setting-section2'>
