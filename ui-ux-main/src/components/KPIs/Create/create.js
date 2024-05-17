@@ -1,7 +1,7 @@
 import React from 'react';
 import './create.css';
 import Select from 'react-select';
-
+import KPIs from '../KPIs';
 class Create extends React.Component {
 
     constructor(props) {
@@ -43,8 +43,29 @@ class Create extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    const { kpiTitle, startDate, endDate, category } = this.state;
-
+    // const { kpiTitle, startDate, endDate, category } = this.state;
+    const newData = {
+      title: this.state.kpiTitle,
+      startDate: this.state.startDate,
+      endDate: this.state.endDate,
+      progress: 0,
+      tags: ['Lý thuyết', 'Thực hành', 'Bài tập'],
+      details:[
+        {
+          name: 'Bài tập',
+          targetHours: 100,
+          completedHours: 70,
+          Task: '30/100',
+        },
+        {
+          name: 'Thực hành',
+          targetHours: 200,
+          completedHours: 100,
+          Task: '130/200',
+        },
+      ]
+    };
+    this.props.addToList(newData);
     this.props.onClose();
 
   };
@@ -73,7 +94,7 @@ class Create extends React.Component {
             <div className="create-kpi-container">
         <form onSubmit={this.handleSubmit}>
           <div className='name-create-kpi'>
-            <label htmlFor="kpiTitle">Tên mục tiêu:</label>
+            <label htmlFor="kpiTitle">Tên KPI:</label>
             <input
               type="text"
               id="kpiTitle"
@@ -132,6 +153,7 @@ class Create extends React.Component {
         )}
       </div>
           <button type="submit" className='Done kpi-create-button'>Tạo</button>
+          {/* <KPIs ref="kpis" /> */}
           <button type="button" onClick={this.props.onClose} className='Close kpi-create-button'>Hủy</button>
         </form>
       </div>

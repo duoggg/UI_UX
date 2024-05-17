@@ -16,18 +16,27 @@ class Task extends React.Component {
           category: "Lý thuyết",
           items: [
             { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "completed", priority: "High", statusText:"Đã hoàn thành"  },
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "overdue", priority: "Medium", statusText:"Quá hạn"},
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
+            { title: "Bài tập ITSS", date: "02/03/23", time: "17:00", status: "completed", priority: "Medium", statusText:"Đã hoàn thành" },
+            { title: "Bài tập Web", date: "08/03/23", time: "20:00", status: "overdue", priority: "Low", statusText:"Quá hạn" },
+            { title: "Bài tập AI", date: "10/03/23", time: "22:00", status: "incomplete", priority: "Medium", statusText:"Chưa hoàn thành" },
+            { title: "Bài tập QTPM", date: "05/03/23", time: "15:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
           ],
         },
         {
-          category: "Giảng dạy",
+          category: "Hoạt động",
           items: [
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "completed", priority: "High", statusText:"Đã hoàn thành"  },
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "overdue", priority: "Medium", statusText:"Quá hạn"},
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
+            { title: "10000 bước chân", date: "08/03/23", time: "23:59", status: "completed", priority: "High", statusText:"Đã hoàn thành"  },
+            { title: "Họp lớp", date: "01/03/23", time: "16:00", status: "overdue", priority: "Medium", statusText:"Quá hạn"},
+            { title: "CLB", date: "01/04/23", time: "18:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
+            { title: "Đọc sách", date: "02/04/23", time: "20:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
+          ],
+        },
+        {
+          category: "Thực hành",
+          items: [
+            { title: "Thực hành KTMT", date: "08/03/23", time: "23:59", status: "completed", priority: "High", statusText:"Đã hoàn thành"  },
+            { title: "Thực hành OOP", date: "01/03/23", time: "16:00", status: "overdue", priority: "Medium", statusText:"Quá hạn"},
+           
           ],
         },
         // Thêm danh mục nhiệm vụ khác tại đây

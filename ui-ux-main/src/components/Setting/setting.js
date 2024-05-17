@@ -81,7 +81,7 @@ class Setting extends React.Component {
       <div className="setting-item">
         {/* Icon */}
         <div className="item-content">
-          <h4>Ngôn ngữ</h4>
+          <h3>Ngôn ngữ</h3>
           <p>Ngôn ngữ hiển thị trên giao diện trang web, ngôn ngữ ưa thích</p>
         </div>
         <div className="dropdown">
@@ -99,7 +99,7 @@ class Setting extends React.Component {
       <div className="setting-item">
         {/* Icon */}
         <div className="item-content">
-          <h4>Thông báo</h4>
+          <h3>Thông báo</h3>
           <p>Khuyến khích bật để chúng tôi có thể hỗ trợ bạn tốt nhất</p>
         </div>
         <Link to="./noti"><button className="edit-button">Chỉnh sửa</button></Link>
@@ -109,7 +109,7 @@ class Setting extends React.Component {
        <div className="setting-item">
         {/* Icon */}
         <div className="item-content">
-          <h4>Chế độ tối</h4>
+          <h3>Chế độ tối</h3>
           <p>Đổi màu nền giao diện</p>
         </div>
         <label className="switch">

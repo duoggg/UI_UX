@@ -92,7 +92,8 @@ body {
   background-color: #FFFCE7;
   border-radius: 5px;
   border: none;
-  box-shadow: 0 -4px 8px #f9f9f9, 0 4px 8px #00000026;
+  /* box-shadow: 0 -4px 8px #f9f9f9, 0 4px 8px #00000026; */
+  border: 1px solid #282c34;
   flex-shrink: 0;
   width: 150px;
 }
@@ -129,6 +130,8 @@ body {
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 20px;
+  border: 2px solid #EAEAEA;
+  border-radius: 20;
 }
 
 .category-header {

@@ -61,7 +61,8 @@ body {
 }
 .kpi-item {
   background-color: #FFFCE7;
-  border-radius: 8px;
+  border: 2px solid #EAEAEA;
+  border-radius: 20;
   padding: 20px;
   margin-bottom: 15px;
   box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.24);
@@ -119,7 +120,8 @@ body {
   background-color: #FFFCE7;
   border-radius: 5px;
   border: none;
-  box-shadow: 0 -4px 8px #f9f9f9, 0 4px 8px #00000026;
+  /* box-shadow: 0 -4px 8px #f9f9f9, 0 4px 8px #00000026; */
+  border: 1px solid #282c34;
   flex-shrink: 0;
 }
 
@@ -177,7 +179,7 @@ background-color: #16871a;
 .kpis-forcecast{
   padding: 10px;
   font-size: medium;
-  background-color: #FFFCE7;
+  background-color: #939185;
   border-radius: 5px;
   border-width: 0.2px;
 }

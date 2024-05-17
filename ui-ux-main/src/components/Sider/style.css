@@ -1,9 +1,10 @@
 .sider {
   position: fixed;
   overflow: auto;
-  width: 17.8%;
+  width: 15%;
   height: 1024px;
-  background: #fff;
+  background: #0000;
+  
 }
 
 .sider .inner-logo {
@@ -57,4 +58,14 @@
 .link-tag {
   text-decoration: none;
   color: #081C15;
+}
+
+.sider {
+  position: fixed;
+  overflow: auto;
+  width: 15%;
+  height: 1024px;
+  background: #1f191900;
+  border-right: #081C15;
+  
 }
