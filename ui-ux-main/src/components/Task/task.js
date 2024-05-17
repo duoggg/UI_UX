@@ -3,6 +3,9 @@ import Sider from '../Sider';
 import Header from '../Header';
 import './task.css';
 import CreateGoal from './Create/create';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faAngleRight, faAngleLeft} from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
 
 class Task extends React.Component {
   constructor(props) {
@@ -97,7 +100,7 @@ class Task extends React.Component {
                     <button
                     onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] - 1)}
                     disabled={this.state.currentSlide[index] === 0} >
-
+                      <FontAwesomeIcon icon={faAngleLeft} className='icon' />
                     </button>
                     <div className='task-child'>
                       {category.items.slice(this.state.currentSlide[index] * this.state.itemsPerPage, (this.state.currentSlide[index] + 1) * this.state.itemsPerPage).map((item, itemIndex) => (
@@ -118,7 +121,9 @@ class Task extends React.Component {
                   
                     <button 
                     onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] + 1)}
-                    disabled={this.state.currentSlide[index] === Math.ceil(category.items.length / this.state.itemsPerPage) - 1}></button>
+                    disabled={this.state.currentSlide[index] === Math.ceil(category.items.length / this.state.itemsPerPage) - 1}>
+                    <FontAwesomeIcon icon={faAngleRight} className='icon' />
+                    </button>
                 </div>
               </div>
             ))}
