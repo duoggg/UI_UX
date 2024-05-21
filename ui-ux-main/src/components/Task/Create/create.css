@@ -64,11 +64,9 @@
   flex: 1;
 }
 
-.select{
-  min-width: 40%;
-}
 
-.select input { 
+.category-select input { 
+  width: 200px !important;
   box-shadow: none !important;
   padding: 0 !important;
 }
@@ -77,7 +75,7 @@
 .category-details input {
   margin-bottom: 5px; /* Khoảng cách giữa các input */
   padding: 10px 7px ;
-  width: 20% !important;
+  width: 30% !important;
 }
 
 .task-create-button{

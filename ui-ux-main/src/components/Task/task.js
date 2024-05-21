@@ -4,8 +4,9 @@ import Header from '../Header';
 import './task.css';
 import CreateGoal from './Create/create';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faAngleRight, faAngleLeft} from '@fortawesome/free-solid-svg-icons'
+import {faAngleRight, faAngleLeft, } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core';
+
 
 class Task extends React.Component {
   constructor(props) {
