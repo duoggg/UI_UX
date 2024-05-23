@@ -1,5 +1,5 @@
 
-import KPIs from './components/KPIs/KPIs';
+import KPIs from './components/KPIs/index';
 import { Routes,Route } from 'react-router-dom';
 import Task from './components/Task/task';
 import Setting from './components/Setting/setting';
