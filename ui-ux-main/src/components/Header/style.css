@@ -7,6 +7,8 @@
   align-items: center;
   box-shadow: 5px 3px 8px #73827b5e;
   z-index: 10;
+  position: fixed;
+  margin-left: 220px;
 }
 
 .header .inner-title p {
@@ -110,12 +112,17 @@
     width: calc(100% - 45px) !important;
     justify-content: center;
     position: sticky;
-    height: 10vh;
+    height: 7vh;
     max-width: 100vw !important;
   }
 
   .header .inner-content, .inner-title {
     scale: 0.9;
+  }
+
+    .header .inner-title p {
+    margin: 5px 10px; 
+    font-size: 18px; /* Smaller font size */
   }
 
   .header .inner-content {

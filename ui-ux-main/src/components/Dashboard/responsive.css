@@ -2,9 +2,9 @@
     .container{
         width: calc(100% - 50px);
         padding: 10px;
+        padding-top: 5%;
         margin-left: 13%;
-        padding-top: 20%;
-        overflow: auto;
+        overflow-y: auto;
     }
 
     .container-header .inner-list .inner-item1, 

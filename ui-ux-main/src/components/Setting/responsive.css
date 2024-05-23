@@ -1,0 +1,12 @@
+
+@media (max-width: 768px){
+ /* Settings */  
+.setting-container {
+  width: calc(100% - 50px); /* Chiều rộng danh sách mục tiêu, trừ đi chiều rộng sidebar */
+  margin-left: 50px; /* Khoảng cách so với sidebar */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+
+}
