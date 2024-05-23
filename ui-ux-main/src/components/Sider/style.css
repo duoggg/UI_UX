@@ -5,7 +5,7 @@
   height: 1024px;
   background: #ffffff;
   box-shadow: 0px 5px 5px #888888;
-  
+  z-index: 99;
 }
 
 .sider .inner-logo {
@@ -79,6 +79,7 @@
   .sider {
     width: 50px;
     height: 100vh;
+    background: #fff;
   }
 
   .sider .inner-logo {
