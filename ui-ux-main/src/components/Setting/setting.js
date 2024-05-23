@@ -2,7 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';import Sider from '..
 import Header from '../Header';
 import './setting.css';
 import './responsive.css';
-import avatar from '../../assets/avatar.jpg'
+import './settingResponsive.css';
+import avatar from '../../assets/avatar.jpg';
 import { Link } from 'react-router-dom';
 
 

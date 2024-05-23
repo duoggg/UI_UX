@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./calendar.css";
+import './calendarResponsive.css';
 import Sider from '../Sider';
 import Header from '../Header';
 const Calendar = () => {
@@ -82,11 +83,19 @@ const Calendar = () => {
     <div className="calendar">
       <div className="calendar-container">
         <div className="header-calendar">
-          <button onClick={handlePrevMonth}>&lt;</button>
+          {/* <button class ="button" onClick={handlePrevMonth}>&lt;</button> */}
+          <button class="button" onClick={handlePrevMonth}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 23" width="20" height="20">
+    <path fill="currentColor" d="M5 12H5M12 19l-7-7 7-7"/>
+  </svg>
+</button>
           <span>
             {months[date.getMonth()]} {date.getFullYear()}
           </span>
-          <button onClick={handleNextMonth}>&gt;</button>
+          <button class="button" onClick={handleNextMonth}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 23" width="20" height="20">
+    <path fill="currentColor" d="M5 12h14M12 5l7 7-7 7"/>
+  </svg></button>
+
         </div>
 
         <div className="days">

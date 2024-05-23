@@ -9,6 +9,7 @@ import {
   IconObj,
   IconSetting,
   IconSignOut,
+  IconProfile,
 } from '../../assets/index';
 import logo from '../../assets/logo.png';
 

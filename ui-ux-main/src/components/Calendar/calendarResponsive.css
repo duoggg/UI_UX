@@ -1,0 +1,102 @@
+
+  
+  
+
+/* Quy tắc CSS responsive cho màn hình có kích thước nhỏ hơn hoặc bằng 768px */
+@media (max-width: 768px) {
+    .calendar-container {
+      width: 80%;
+      height: auto;
+      transform: none;
+      margin: 0 auto;
+      padding: 20px;
+      transform: translate(15px, 50px);
+      
+    }
+  
+    .calendar {
+      width: 100%;
+      grid-template-columns: 1fr;
+      transform: none;
+      margin: 0 auto;
+      padding: 0;
+    }
+  
+    .header-calendar {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      transform: none;
+      flex-direction: row;
+    }
+    
+  
+    
+      
+      .header-calendar .button {
+       
+        margin: 10px 0; /* Tạo khoảng cách giữa các nút */
+      }
+    
+      .header-calendar span {
+        margin: 5px 0; /* Tạo khoảng cách giữa các phần tử */
+      }
+    
+    .title {
+      font-size: 20px;
+      transform: none;
+      text-align: center;
+    }
+  
+    .nameDays {
+      width: 100%;
+      padding: 10px;
+      grid-template-columns: repeat(7, 1fr);
+      margin-top: 20px;
+      transform: none;
+    }
+  
+    .days {
+     
+      transform: none;
+      border-radius: 50px;
+    }
+  
+    .day-calendar {
+      width: 100%;
+      height: auto;
+      transform: none;
+    }
+  
+    .task {
+      width: 80%;
+      height: auto;
+      margin: 20px 0;
+      transform: none;
+      padding: 20px;
+      transform: translate(60px, 50px);
+     
+    }
+  
+    .headerTask {
+      font-size: 20px;
+      transform: none;
+      padding: 10px 0;
+    }
+  
+    .task-list {
+      margin: 20px 0;
+    }
+  
+    .task-list ul li {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .item-calendar {
+      width: 100%;
+      height: auto;
+      transform: none;
+    }
+  }

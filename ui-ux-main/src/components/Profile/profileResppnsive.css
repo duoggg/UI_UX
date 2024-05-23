@@ -1,0 +1,83 @@
+@media (max-width: 768px) {
+    .setting-container {
+      width: 80%; /* Chiều rộng đầy đủ */
+      transform: translate(60px, 10px);
+      margin: 0; /* Loại bỏ khoảng cách */
+      padding: 10px; /* Điều chỉnh padding */
+    }
+  
+    .setting-header {
+      flex-direction: column; /* Chuyển từ row sang column */
+      align-items: center; /* Căn giữa nội dung */
+      margin-bottom: 20px; /* Giảm khoảng cách dưới */
+      margin-top: 20px; /* Giảm khoảng cách trên */
+      height: auto; /* Tự động chiều cao */
+      padding: 20px 10px; /* Thêm padding để phù hợp */
+      text-align: center; /* Canh giữa nội dung văn bản */
+    }
+  
+    .avatar {
+      width: 50px; /* Giảm kích thước avatar */
+      height: 50px; /* Giảm kích thước avatar */
+      margin-left: 0; /* Bỏ margin-left */
+      margin-bottom: 10px; /* Thêm khoảng cách dưới */
+    }
+  
+    .company-name {
+      margin-left: 0; /* Bỏ margin-left */
+      font-size: 20px; /* Giảm kích thước font */
+    }
+  
+    .changeacc-button,
+    .edit-button {
+      margin-left: 0; /* Bỏ margin-left auto */
+      margin-right: 0; /* Bỏ margin-right */
+      width: 90%; /* Giảm chiều rộng */
+      margin-bottom: 10px; /* Thêm khoảng cách dưới */
+    }
+  
+    .setting-list {
+      gap: 15px; /* Giảm khoảng cách giữa các phần tử */
+    }
+  
+    .setting-section1,
+    .setting-section2 {
+      padding: 15px; /* Điều chỉnh padding cho phù hợp */
+    }
+  
+    .setting-item {
+      flex-direction: column; /* Chuyển từ row sang column */
+      align-items: flex-start; /* Canh các phần tử về bên trái */
+      text-align: left; /* Canh trái nội dung văn bản */
+    }
+  
+    .item-content {
+      width: 100%; /* Đảm bảo nội dung rộng toàn bộ */
+      padding-bottom: 10px; /* Thêm khoảng cách dưới */
+    }
+  
+    .switch {
+      margin-left: 0; /* Bỏ margin-left */
+      margin-right: 0; /* Bỏ margin-right */
+      margin-top: 10px; /* Thêm khoảng cách trên */
+    }
+  
+    .dropdown {
+      width: 100%; /* Đảm bảo dropdown rộng toàn bộ chiều rộng container */
+      margin-top: 10px; /* Thêm khoảng cách trên */
+    }
+  
+    .dropdown-button-1 {
+      width: 100% !important; /* Đảm bảo nút dropdown rộng toàn bộ chiều rộng container */
+      height: auto !important; /* Tự động chiều cao */
+    }
+  
+    .dropdown-menu-2 {
+      width: 100% !important; /* Đảm bảo menu dropdown rộng toàn bộ chiều rộng container */
+    }
+  
+    .dropdown-menu-2 a {
+      width: 100%; /* Đảm bảo các liên kết rộng toàn bộ chiều rộng container */
+    }
+  }
+  

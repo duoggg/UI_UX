@@ -2,6 +2,7 @@ import React from "react";
 import Sider from '../Sider';
 import Header from '../Header';
 import './profile.css';
+import './profileResppnsive.css'
 import avatar from '../../assets/avatar.jpg'
  class Profile extends React.Component {
 
