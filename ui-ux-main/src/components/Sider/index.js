@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { 
   DAPAT, 
-  Logo,
   IconCalender,
   IconDashboard,
   IconKPI,
@@ -11,6 +10,7 @@ import {
   IconSetting,
   IconSignOut,
 } from '../../assets/index';
+import logo from '../../assets/logo.png';
 
 export const Sider = () => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -22,7 +22,7 @@ export const Sider = () => {
     <>
       <div className='sider'>
         <div className='inner-logo'>
-          <a href='#'><Logo/></a>
+          <img src ={logo}/>
           <a href='#'><DAPAT/></a>
         </div>        
         <div className='inner-content'>

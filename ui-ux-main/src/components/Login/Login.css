@@ -10,16 +10,18 @@
 
 .login-container{
     margin-top: 10%;
-    width: 530px;
+    /* width: 530px !important; */
     border-radius: 20px;
     background-color: #fffce7;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
     text-align: center;
     padding: 40px 50px;
+    align-items: center;
 }
 
 .login-container h2{
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .login-container form{

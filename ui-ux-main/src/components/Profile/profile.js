@@ -5,6 +5,23 @@ import './profile.css';
 import avatar from '../../assets/avatar.jpg'
  class Profile extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.dropdownButtonRef = React.createRef();
+        this.state = {
+          selectedGender: 'Lựa chọn'
+        };
+      }
+      componentDidMount() {
+        if (this.dropdownButtonRef.current) {
+          const buttonWidth = this.dropdownButtonRef.current.offsetWidth;
+          const dropdownMenu = this.dropdownButtonRef.current.nextElementSibling; 
+          dropdownMenu.style.width = `${buttonWidth}px`;
+        }
+      }
+      handleGenderChange = (gender) => {
+        this.setState({ selectedGender: gender });
+      };
     render() {
     return(
         <>
@@ -28,7 +45,14 @@ import avatar from '../../assets/avatar.jpg'
                 </div>
                 <div className="profile-infor">
                     <div className="profile-infor-text">Giới tính:</div>
-                    <input type="text" className="profile-input" placeholder="Nam, nữ hoặc không"></input>
+                    <div className="dropdown">
+                            <button className="dropdown-button" ref={this.dropdownButtonRef}>{this.state.selectedGender}</button>
+                            <div className="dropdown-menu-1">
+                                <a onClick={() => this.handleGenderChange('Nam')}>Nam</a>
+                                <a onClick={() => this.handleGenderChange('Nữ')}>Nữ</a>
+                                <a onClick={() => this.handleGenderChange('Khác')}>Khác</a>
+                            </div>
+                    </div>
                 </div>
             </div>
             <div className="profile-section">

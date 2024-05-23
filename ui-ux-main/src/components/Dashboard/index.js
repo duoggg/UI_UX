@@ -65,12 +65,12 @@ const Dashboard = () => {
                           datasets: [{
                             label: 'Tuần trước',
                             data: [10, 70, 50, 80, 10, 30, 10],
-                            borderColor: "#b91d47",
+                            borderColor: "#045711",
                             fill: false
                           },{
                             label: 'Tuần này',
                             data: [0, 90, 30, 70, 20, 50, 100],
-                            borderColor: "#2b5797",
+                            borderColor: "#5DD980",
                             fill: false
                           }]
                         }}  
@@ -103,9 +103,9 @@ const Dashboard = () => {
                         labels: ['Cần hoàn thành', 'Đã hoàn thành', 'Quá hạn'],
                         datasets: [{
                           backgroundColor: [
-                            "#8AE969",
-                            "#74B1C0",
-                            "#E46464",
+                            "#1C712F",
+                            "#518B61",
+                            "#75CA57",
                           ],
                           data: [20, 70, 10]
                         }]

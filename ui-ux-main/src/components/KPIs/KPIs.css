@@ -170,10 +170,13 @@ h3 {
   height: 140px;
 }
 
-.arrow {
-width: 10px;
-height: 10px;
-background-color: #16871a;
+.kpi-details .icon{
+  font-size: 50px;
+}
+
+.kpi-details button {
+  background-color: #fffce4;
+  border: none;
 }
 
 .kpis-forcecast{

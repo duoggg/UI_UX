@@ -1,9 +1,10 @@
 .sider {
   position: fixed;
   overflow: auto;
-  width: 15%;
+  width: 210px !important;
   height: 1024px;
-  background: #0000;
+  background: #ffffff;
+  box-shadow: 0px 5px 5px #888888;
   
 }
 
@@ -12,6 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: left;
+  /* width: 210px; */
 }
 
 .sider .inner-logo a {
@@ -25,12 +27,13 @@
 }
 
 .sider .inner-content div {
-  width: 100%;
+  width: 210px;
   padding: 20px;
   display: flex;
   align-items: center;
   padding-left: 35px;
   transition: all 0.2s ease-out;
+ 
 }
 
 .sider .inner-content div p {
@@ -41,7 +44,9 @@
 .sider .inner-content div:hover {
   background: #91D9B5;
   border-radius: 5px;
+  /* margin: 5px 0; */
   transition: all 0.2s ease-out;
+
 }
 
 .sider .inner-content .sign-out{

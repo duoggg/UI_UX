@@ -85,14 +85,14 @@ class Setting extends React.Component {
           <p>Ngôn ngữ hiển thị trên giao diện trang web, ngôn ngữ ưa thích</p>
         </div>
         <div className="dropdown">
-         <button className="dropdown-button" ref={this.dropdownButtonRef}>{this.state.selectedLanguage}</button>
-         <div className="dropdown-menu">
-             <a onClick={() => this.handleLanguageChange('Tiếng Anh')}>Tiếng Anh</a>
-             <a onClick={() => this.handleLanguageChange('Tiếng Nhật')}>Tiếng Nhật</a>
-             <a onClick={() => this.handleLanguageChange('Tiếng Việt')}>Tiếng Việt</a>
-             <a onClick={() => this.handleLanguageChange('Tiếng Lòng Em')}>Tiếng Lòng Em</a>
-    </div>
-  </div>
+         <button className="dropdown-button-1" ref={this.dropdownButtonRef}>{this.state.selectedLanguage}</button>
+            <div className="dropdown-menu-2">
+                <a onClick={() => this.handleLanguageChange('Tiếng Anh')}>Tiếng Anh</a>
+                <a onClick={() => this.handleLanguageChange('Tiếng Nhật')}>Tiếng Nhật</a>
+                <a onClick={() => this.handleLanguageChange('Tiếng Việt')}>Tiếng Việt</a>
+                <a onClick={() => this.handleLanguageChange('Tiếng Lòng Em')}>Tiếng Lòng Em</a>
+            </div>
+      </div>
       </div>
     </div>
     <div className="setting-section2">

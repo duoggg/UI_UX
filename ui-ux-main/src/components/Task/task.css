@@ -168,11 +168,17 @@ body {
   justify-content: space-between;
 }
 
-.task-items button {
-  width: 20px;
-  height: 10px;
-  background-color: #7d7d7d !important;
+.task-items .icon{
+  font-size: 50px;
 }
+
+.task-items button {
+  /* width: 40px;
+  height: 50px; */
+  background-color: #fffce4;
+  border: none;
+}
+
 
 .task-child{
   display: flex;

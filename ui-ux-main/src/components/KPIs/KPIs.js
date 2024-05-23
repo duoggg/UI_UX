@@ -8,6 +8,8 @@ import {
 } from '../../assets/index';
 import CreateGoal from './Create/create';
 import Forecast from '../Forecast/forecast';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faAngleRight, faAngleLeft, faAngleDown} from '@fortawesome/free-solid-svg-icons'
 
 class KPIs extends React.Component {
     constructor(props) {
@@ -298,8 +300,7 @@ class KPIs extends React.Component {
                 {kpi.tags.map((tag, tagIndex) => (
                   <span key={tagIndex} className="kpi-tag">{tag}</span>
                 ))}</div>
-               
-                <div className="arrow" onClick={() => this.toggleDetails(index)}></div>
+                 <FontAwesomeIcon icon={faAngleDown} onClick={() => this.toggleDetails(index)}/>
                 
               </div>
                
@@ -322,7 +323,9 @@ class KPIs extends React.Component {
               {this.state.showDetails[index] && (
                 <>
               <div className="kpi-details">
-                <button  onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] - 1)} disabled={this.state.currentSlide[index] === 0} ></button>
+                <button  onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] - 1)} disabled={this.state.currentSlide[index] === 0} >
+                <FontAwesomeIcon icon={faAngleLeft} className='icon'/>
+                </button>
                 {kpi.details.slice(this.state.currentSlide[index] * this.state.itemsPerPage, (this.state.currentSlide[index] + 1) * this.state.itemsPerPage).map((detail) => (
                   <div className="detail-item" key={detail.name}>
                     <h4>{detail.name}</h4>
@@ -350,7 +353,9 @@ class KPIs extends React.Component {
                   </div>     
                 ))}
               
-                <button onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] + 1)}  disabled={this.state.currentSlide[index] === Math.ceil(kpi.details.length / this.state.itemsPerPage) - 1} ></button>
+                <button onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] + 1)}  disabled={this.state.currentSlide[index] === Math.ceil(kpi.details.length / this.state.itemsPerPage) - 1} >
+                <FontAwesomeIcon icon={faAngleRight} className='icon'/>
+                </button>
                 
               </div>
                 <div className='forecast-button-1' onClick={this.handleForecast}><p> Dự báo</p></div>
