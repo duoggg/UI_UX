@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../../components/Header';
 import Sider from '../../components/Sider';
 import './style.css';
+import './responsive.css';
 import { Bar, Line, Pie } from 'react-chartjs-2';
 import Chart from 'chart.js/auto';
 import { IconBG2 ,IconBG1, IconBG3}  from '../../assets/index';
