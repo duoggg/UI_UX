@@ -1,6 +1,6 @@
 import React from 'react';
 import './register.css';
-import './registerResponsive.css';
+
 class Register extends React.Component {
 
     constructor(props) {
