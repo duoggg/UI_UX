@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Sider from "./components/Sider";
 // import "./App.css";
-import KPIs from "./components/KPIs/KPIs";
+import KPIs from "./components/KPIs/index";
 import Task from "./components/Task/task";
 import Setting from "./components/Setting/setting";
 import Profile from "./components/Profile/profile";
@@ -14,11 +14,11 @@ function App() {
     <>
       <Sider />
       {<Header title={"Header"} />}
-      {/* <KPIs/> */}
+      <KPIs/>
       {/* <Task/> */}
       {/* <Setting/> */}
       {/* <Notification/> */}
-      <Calendar />
+      {/* <Calendar /> */}
     </>
   );
 }
