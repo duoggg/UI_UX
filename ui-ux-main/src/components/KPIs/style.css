@@ -1,0 +1,157 @@
+.kpi-dl {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  background: #FFFCE7;
+  padding: 10px 40px 10px 40px;
+  border-radius: 5px;
+  width: fit-content;
+  height: auto;
+  gap: 40px;
+  box-shadow: rgba(0, 0, 0, 0.286) 2px 2px 5px;
+  margin-bottom: 20px;
+}
+
+.kpi-dl .active {
+  font-weight: 700;
+}
+
+.kpi-act {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+
+.kpi-act .search {
+  width: 25%;
+}
+
+.kpi-act .search input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  background: #FFFCE7;
+  width: 100%;
+}
+
+.kpi-act .add-kpi {
+  position: absolute;
+  right: 10%;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  border: 0.5px solid #ddd;
+  border-radius: 5px;
+  padding: 8px 10px 8px 10px;
+  background: #FFFCE7;
+}
+
+.kpi-act .add-kpi button {
+  border: none;
+  background: #FFFCE7;
+  font-weight: 600;
+}
+
+.kpi-container {
+  margin-top: 20px;
+}
+
+.kpi-container .kpi-item {
+  background: #FFFCE7;
+  margin-bottom: 20px;
+  width: 90%;
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+
+.kpi-item .kpi-title {
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  padding: 10px;
+  padding-bottom:15px;
+}
+
+.kpi-item .kpi-title span {
+  font-size: 15px;
+  font-weight: 600;
+  background: #fff7b9;
+  padding: 5px 20px 5px 20px;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+}
+
+.kpi-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 15px
+}
+
+.kpi-list .kpi-list-item {
+  border: 1px solid black;
+  background: #DFFFF4;
+  border-radius: 0.5rem;
+  padding: 10px;
+  width: 30%;
+  height: auto;
+  box-shadow: #dddddd 2px 2px 2px 2px;
+}
+
+.kpi-list-item-title {
+  position: relative;
+}
+
+.kpi-list-item-title-left-item-content-title {
+  margin-bottom: 10px;
+}
+
+.kpi-list-item-title-left-item-content-title span {
+  font-weight: 700;
+}
+
+.kpi-list-item-title-left-item-content-time{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.kpi-list-item-title-left-item-content-time button {
+  border-radius: 6px;
+  border: 1px solid #357D5D;
+  background: #DFFFF4;
+  padding: 2px 5px 2px 5px;
+  color: #357D5D;
+  font-weight: 500;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+}
+
+.kpi-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .kpi-list {
+    display: block;
+  }
+
+  .kpi-list-item{
+    width: 94% !important;
+    margin-top: 15px;
+  }
+
+  .kpi-dl {
+    margin-top: 90px;
+  }
+}
