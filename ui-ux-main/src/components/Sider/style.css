@@ -58,3 +58,23 @@
   text-decoration: none;
   color: #081C15;
 }
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .sider {
+    width: 50px;
+    height: 100%;
+  }
+
+  .sider.open {
+    transform: translateX(0); /* Slide in from the left */
+  }
+
+  /* Style changes for smaller screens */
+  .sider .inner-logo {
+    overflow: hidden;
+  }
+  
+  .sider .inner-content div {
+    padding-left: 20px; /* Reduce padding on smaller screens */
+  }
+}
