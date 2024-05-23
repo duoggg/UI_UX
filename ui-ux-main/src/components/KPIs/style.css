@@ -1,6 +1,5 @@
 .kpi-dl {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 
@@ -12,6 +11,10 @@
   gap: 40px;
   box-shadow: rgba(0, 0, 0, 0.286) 2px 2px 5px;
   margin-bottom: 20px;
+}
+
+.kpi-dl .kpi-dl-item {
+  width: fit-content;
 }
 
 .kpi-dl .active {
@@ -89,7 +92,8 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 10px;
-  gap: 15px
+  gap: 15px;
+  justify-content: center;
 }
 
 .kpi-list .kpi-list-item {
@@ -167,5 +171,13 @@
 
   .search {
     width: 30vw !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-kpi{
+    width: 80%;
+    float: right;
+    margin-top: 5vh;
   }
 }
