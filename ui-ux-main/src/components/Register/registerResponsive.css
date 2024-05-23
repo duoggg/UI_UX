@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+    .register-container {
+      width: 90%; /* Giảm chiều rộng của container để phù hợp với thiết bị nhỏ hơn */
+      padding: 20px; /* Giảm khoảng cách lề bên trong container */
+      margin-top: 5%; /* Giảm khoảng cách từ trên xuống */
+    }
+  
+    .register-container form button {
+      width: 50%; /* Điều chỉnh chiều rộng của nút button */
+      margin: 10px auto; /* Căn giữa nút button */
+    }
+  }
+  

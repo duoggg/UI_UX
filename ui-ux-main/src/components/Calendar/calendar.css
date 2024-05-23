@@ -67,6 +67,21 @@
   /* transform: translateY(-20px); */
 }
 
+/* CSS cho nút button */
+.button {
+  background-color: #b9e2cf; /* Màu nền của nút */
+  color: #000; /* Màu chữ của nút */
+  border: #000; /* Loại bỏ viền của nút */
+  padding: 5px 5px; /* Kích thước lề của nút */
+  border-radius: 50px; /* Bo tròn góc của nút */
+  cursor: pointer; /* Hiển thị con trỏ tay khi rê chuột qua nút */
+ 
+}
+
+
+
+
+
 .title {
   font-size: 25px;
   transform: translateX(-270px);

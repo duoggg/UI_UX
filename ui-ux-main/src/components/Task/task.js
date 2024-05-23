@@ -2,6 +2,7 @@ import React from 'react';
 import Sider from '../Sider';
 import Header from '../Header';
 import './task.css';
+import './taskResponsive.css';
 import CreateGoal from './Create/create';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faAngleRight, faAngleLeft} from '@fortawesome/free-solid-svg-icons'

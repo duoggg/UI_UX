@@ -1,0 +1,66 @@
+@media (max-width: 768px) {
+    
+    .login-container {
+        width: 90%; /* Giảm độ rộng của container */
+        padding: 20px; /* Giảm lề của container */
+        transform: translateY(70px);
+      }
+  
+    .login-container form {
+      width: 100%; /* Đặt chiều rộng của form là 100% */
+    }
+  
+    .form-group {
+      flex-direction: column; /* Chuyển sang kiểu dọc cho các thành phần trong form */
+      width: 100%; /* Đặt chiều rộng của form group là 100% */
+    }
+  
+    .group-forget {
+      width: 100%; /* Đặt chiều rộng của nhóm quên mật khẩu là 100% */
+      justify-content: flex-start; /* Căn trái các thành phần trong nhóm */
+      transform: translateY(-10px);
+    }
+  
+    .group-forget input {
+      width: auto; /* Đặt chiều rộng của input trong nhóm quên mật khẩu là tự động */
+      
+    }
+  
+    .form-group input {
+      width: 100%; /* Đặt chiều rộng của input trong form group là 100% */
+    }
+  
+    .login-container form button {
+      width: 80%; /* Đặt chiều rộng của button trong form là 100% */
+      
+    }
+  
+    .social-login {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px auto;
+      }
+      
+      .social-login button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .social-icon {
+        font-size: 20px;
+        color: #ffffff;
+      }
+  
+    .create-account {
+      margin: 20px auto; /* Đặt lề trên và dưới cho phần tạo tài khoản và căn giữa */
+      text-align: center; /* Căn giữa nội dung trong phần tạo tài khoản */
+    }
+    
+  }
+  

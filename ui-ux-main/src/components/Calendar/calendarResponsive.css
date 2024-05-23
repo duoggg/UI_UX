@@ -1,0 +1,106 @@
+/* CSS cho Sidebar */
+.sider {
+    position: fixed;
+    overflow: auto;
+    width: 210px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0px 5px 5px #888888;
+    z-index: 1; /* Đảm bảo sidebar hiển thị trên cùng */
+  }
+  
+  @media (max-width: 768px) {
+    .sider {
+      width: 50px;
+      z-index: 2; /* Đảm bảo sidebar hiển thị trên cùng khi mở menu */
+    }
+  }
+  
+  
+
+/* Quy tắc CSS responsive cho màn hình có kích thước nhỏ hơn hoặc bằng 768px */
+@media (max-width: 768px) {
+    .calendar-container {
+      width: 80%;
+      height: auto;
+      transform: none;
+      margin: 0 auto;
+      padding: 20px;
+      transform: translate(20px, 50px);
+      
+    }
+  
+    .calendar {
+      width: 100%;
+      grid-template-columns: 1fr;
+      transform: none;
+      margin: 0 auto;
+      padding: 0;
+    }
+  
+    .header-calendar {
+      width: 100%;
+      justify-content: center;
+      transform: none;
+    }
+  
+    .title {
+      font-size: 20px;
+      transform: none;
+      text-align: center;
+    }
+  
+    .nameDays {
+      width: 100%;
+      padding: 10px;
+      grid-template-columns: repeat(7, 1fr);
+      margin-top: 20px;
+      transform: none;
+    }
+  
+    .days {
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      margin-top: 10px;
+      transform: none;
+    }
+  
+    .day-calendar {
+      width: 100%;
+      height: auto;
+      transform: none;
+    }
+  
+    .task {
+      width: 80%;
+      height: auto;
+      margin: 20px 0;
+      transform: none;
+      padding: 20px;
+      transform: translate(65px, 50px);
+     
+    }
+  
+    .headerTask {
+      font-size: 20px;
+      transform: none;
+      padding: 10px 0;
+    }
+  
+    .task-list {
+      margin: 20px 0;
+    }
+  
+    .task-list ul li {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .item-calendar {
+      width: 100%;
+      height: auto;
+      transform: none;
+    }
+  }
+  
