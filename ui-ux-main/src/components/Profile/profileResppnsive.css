@@ -1,83 +1,53 @@
-@media (max-width: 768px) {
-    .setting-container {
-      width: 80%; /* Chiều rộng đầy đủ */
-      transform: translate(60px, 10px);
-      margin: 0; /* Loại bỏ khoảng cách */
-      padding: 10px; /* Điều chỉnh padding */
+@media (max-width: 767px) {
+    .profile-container {
+        width: calc(85% - 50px);
+        margin: 20px auto;
+        margin-left: 70px; 
     }
-  
-    .setting-header {
-      flex-direction: column; /* Chuyển từ row sang column */
-      align-items: center; /* Căn giữa nội dung */
-      margin-bottom: 20px; /* Giảm khoảng cách dưới */
-      margin-top: 20px; /* Giảm khoảng cách trên */
-      height: auto; /* Tự động chiều cao */
-      padding: 20px 10px; /* Thêm padding để phù hợp */
-      text-align: center; /* Canh giữa nội dung văn bản */
+
+  .profile-container .avatar {
+   width: 80px;
+   height: 80px;
+   
+ }
+
+    .profile-container .password-section {
+        width: 100%; 
     }
-  
-    .avatar {
-      width: 50px; /* Giảm kích thước avatar */
-      height: 50px; /* Giảm kích thước avatar */
-      margin-left: 0; /* Bỏ margin-left */
-      margin-bottom: 10px; /* Thêm khoảng cách dưới */
+
+    .profile-container h3 {
+      font-size: 16px;
+      margin-left: 15px;
+      margin-top: 15px;
+      width: 60%; 
     }
-  
-    .company-name {
-      margin-left: 0; /* Bỏ margin-left */
-      font-size: 20px; /* Giảm kích thước font */
+
+    .profile-infor {
+        flex-direction: column; 
+        gap: 5px;
+        font-size: 14px;
+        margin: 10px 5%; 
     }
-  
-    .changeacc-button,
-    .edit-button {
-      margin-left: 0; /* Bỏ margin-left auto */
-      margin-right: 0; /* Bỏ margin-right */
-      width: 90%; /* Giảm chiều rộng */
-      margin-bottom: 10px; /* Thêm khoảng cách dưới */
+
+    .profile-infor-text {
+      margin-left: 2px;
     }
-  
-    .setting-list {
-      gap: 15px; /* Giảm khoảng cách giữa các phần tử */
+
+    .profile-infor .profile-input{
+      width: 100%;
+      margin-bottom: 5px; 
     }
-  
-    .setting-section1,
-    .setting-section2 {
-      padding: 15px; /* Điều chỉnh padding cho phù hợp */
+    .profile-infor .dropdown {
+        width: 40%;
+        margin-bottom: 5px; 
     }
-  
-    .setting-item {
-      flex-direction: column; /* Chuyển từ row sang column */
-      align-items: flex-start; /* Canh các phần tử về bên trái */
-      text-align: left; /* Canh trái nội dung văn bản */
+
+    .profile-container .dropdown-button {
+        margin-right: 0; 
+        width: 100% !important;
     }
-  
-    .item-content {
-      width: 100%; /* Đảm bảo nội dung rộng toàn bộ */
-      padding-bottom: 10px; /* Thêm khoảng cách dưới */
+
+    .profile-container .update {
+        width: 40%; 
     }
-  
-    .switch {
-      margin-left: 0; /* Bỏ margin-left */
-      margin-right: 0; /* Bỏ margin-right */
-      margin-top: 10px; /* Thêm khoảng cách trên */
-    }
-  
-    .dropdown {
-      width: 100%; /* Đảm bảo dropdown rộng toàn bộ chiều rộng container */
-      margin-top: 10px; /* Thêm khoảng cách trên */
-    }
-  
-    .dropdown-button-1 {
-      width: 100% !important; /* Đảm bảo nút dropdown rộng toàn bộ chiều rộng container */
-      height: auto !important; /* Tự động chiều cao */
-    }
-  
-    .dropdown-menu-2 {
-      width: 100% !important; /* Đảm bảo menu dropdown rộng toàn bộ chiều rộng container */
-    }
-  
-    .dropdown-menu-2 a {
-      width: 100%; /* Đảm bảo các liên kết rộng toàn bộ chiều rộng container */
-    }
-  }
-  
+}

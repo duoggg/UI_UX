@@ -10,9 +10,9 @@
         display: none; /* Ẩn nút trong category */
     }
     .task-header {
-      margin-top: 20px; /* Tăng khoảng cách giữa header và task container */
-      margin-bottom: 20px; /* Tăng khoảng cách giữa header và task container */
-      flex-direction: column; /* Đổi hướng hiển thị của header thành dọc */
+      margin-top: 0;
+      margin-bottom: 10px; /* Tăng khoảng cách giữa header và task container */
+      
       align-items: stretch; /* Kéo dãn các phần tử của header */
     }
     .task-items {
@@ -29,8 +29,19 @@
     }
   
     .add-task-button {
-      width: 100%; /* Điều chỉnh chiều rộng của nút thêm task */
-      margin-top: 10px; /* Tạo khoảng cách giữa nút thêm task và các active button */
+      margin-top: 10px;
+      font-size: 0;
+      width: 7vw; /* Điều chỉnh chiều rộng của nút thêm task */
+      height: 7vw;
+      border-radius: 50%;
+      }
+
+    .add-task-button span{
+      position: absolute;
+      top: 20px;
+      right: 18px;
+      font-size: 20px !important;
+      font-weight: 600;
     }
   
     .task-child {
@@ -71,8 +82,9 @@
     width: 130px;
   }
     .CV-title {
+      font-size: 14px;
       padding-left: 0; /* Xóa padding trái của CV title */
-      margin-top: 20px; /* Tạo khoảng cách giữa CV title và task item */
+      margin-top: 5px; /* Tạo khoảng cách giữa CV title và task item */
     }
   }
   
