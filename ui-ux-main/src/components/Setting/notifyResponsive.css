@@ -1,0 +1,19 @@
+@media (max-width: 768px){
+ .notifi-container{
+    width: calc(90% - 50px);
+    margin-left: 15%;
+    margin-top: 10%
+ }
+ .notifi-section{
+    width: 100%;
+ }
+ .notifi-content{
+    font-size: 12px;
+ }
+ .notifi-section .switch{
+    width: 30%;
+ }
+ .notifi-content{
+    width: 80%;
+ }
+}
