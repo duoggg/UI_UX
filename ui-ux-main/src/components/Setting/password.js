@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';import Sider from '..
 import Header from '../Header';
 import avatar from '../../assets/avatar.jpg'
 import './password.css';
+import './passwordResponsive.css';
 
 class Password extends React.Component{
     render(){

@@ -24,21 +24,21 @@
     .container-header .inner-list .inner-item1 h1, 
     .container-header .inner-list .inner-item2 h1,
     .container-header .inner-list .inner-item3 h1{
-        font-size: 18px;
+        font-size: 16px;
         top: 10px;
         left: 10px;
     }
 
     .container-header .inner-list .inner-item1 p, 
     .container-header .inner-list .inner-item2 p{
-        font-size: 14px;
-        top: 13px;
+        font-size: 12px;
+        top: 15px;
         /* width: 70%; */
         text-align: start;
-        left: 36px;
+        left: 32px;
     } 
     .container-header .inner-list .inner-item3 p{
-        font-size: 14px;
+        font-size: 12px;
         top: 13px;
         /* width: 70%; */
         text-align: start;
@@ -74,16 +74,16 @@
     }
 
     .container-main .inner-item .graph{
-    scale: 0.75;
-    left: -67px;
-    top: 20px;
+    scale: 0.65;
+    left: -95px;
+    top: 30px;
    }
     .container-main .inner-item .pie-chart{
     bottom: -90px;
-    left: -10px;
+    left: -30px;
     width: 340px;
     height: 340px;
-    scale: 0.7;
+    scale: 0.6;
   }
     .container-main .inner-item table {
     font-size: 12px;
