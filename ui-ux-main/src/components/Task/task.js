@@ -5,7 +5,7 @@ import './task.css';
 import './taskResponsive.css';
 import CreateGoal from './Create/create';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faAngleRight, faAngleLeft} from '@fortawesome/free-solid-svg-icons'
+import {faAngleRight, faAngleLeft, faCalendar, faClock} from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core';
 class Task extends React.Component {
   constructor(props) {
@@ -74,7 +74,7 @@ class Task extends React.Component {
     return (
       <>
         <Sider />
-        <Header title={"Nhiệm vụ"} />
+        <Header title={"Công việc"} />
         <br />
         <br />
         <br />
@@ -120,8 +120,8 @@ class Task extends React.Component {
                         <span className={`task-priority ${item.priority.toLowerCase()}`}>{item.priority}</span>
                         </div>
                       <div className='task-info'>
-                        <div>{item.date}</div> 
-                        <div>{item.time}</div>
+                        <div><FontAwesomeIcon icon={faCalendar} className='icon1' />{item.date}</div> 
+                        <div><FontAwesomeIcon icon={faClock} className='icon1' />{item.time}</div>
                         <div className={`task-info-status ${item.status.toLowerCase()}`}>{item.statusText}</div>
                       </div>
                       
