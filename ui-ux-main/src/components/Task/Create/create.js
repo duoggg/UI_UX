@@ -171,7 +171,6 @@ class Create extends React.Component {
         {/* Sử dụng react-select */}
         {showCategoryDetails && (
           <div className="category-details">
-          <div className="category-select">
           <Select
             isMulti={false} // Cho phép chọn 1 danh mục
             options={options}
@@ -179,9 +178,11 @@ class Create extends React.Component {
             onChange={(selectedOption) => this.setState({ category: selectedOption.value })} // Cập nhật state khi chọn
             placeholder="Chọn hoặc nhập danh mục"
             isSearchable // Cho phép tìm kiếm
-            isClearable // Cho phép xóa lựa chọn            
+            isClearable // Cho phép xóa lựa chọn
+            className='select'
+            
           />
-          </div>
+
           </div>
         )}
       </div>

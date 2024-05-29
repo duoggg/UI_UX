@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./calendar.css";
+import './calendarResponsive.css';
 import Sider from '../Sider';
 import Header from '../Header';
 import { Badge, Calendar } from 'antd';
