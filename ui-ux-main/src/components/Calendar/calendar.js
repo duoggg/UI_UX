@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./calendar.css";
+import './calendarResponsive.css';
 import Sider from '../Sider';
 import Header from '../Header';
 const Calendar = () => {
@@ -82,25 +83,32 @@ const Calendar = () => {
     <div className="calendar">
       <div className="calendar-container">
         <div className="header-calendar">
-          <div className="title">Lịch</div>
-          <button onClick={handlePrevMonth}>&lt;</button>
+          {/* <button class ="button" onClick={handlePrevMonth}>&lt;</button> */}
+          <button class="button" onClick={handlePrevMonth}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 23" width="20" height="20">
+    <path fill="currentColor" d="M5 12H5M12 19l-7-7 7-7"/>
+  </svg>
+</button>
           <span>
             {months[date.getMonth()]} {date.getFullYear()}
           </span>
-          <button onClick={handleNextMonth}>&gt;</button>
+          <button class="button" onClick={handleNextMonth}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 23" width="20" height="20">
+    <path fill="currentColor" d="M5 12h14M12 5l7 7-7 7"/>
+  </svg></button>
+
         </div>
 
-        <div className="nameDays">
-          <div className="item1 item-calendar"> T2 </div>
-          <div className="item2 item-calendar"> T3 </div>
-          <div className="item3 item-calendar"> T4 </div>
-          <div className="item4 item-calendar"> T5 </div>
-          <div className="item5 item-calendar"> T6 </div>
-          <div className="item6 item-calendar"> T7 </div>
-          <div className="item7 item-calendar"> CN </div>
+        <div className="days">
+          <div className="day-calendar item-calendar"> T2 </div>
+          <div className="day-calendar item-calendar"> T3 </div>
+          <div className="day-calendar item-calendar"> T4 </div>
+          <div className="day-calendar item-calendar"> T5 </div>
+          <div className="day-calendar item-calendar"> T6 </div>
+          <div className="day-calendar item-calendar"> T7 </div>
+          <div className="day-calendar item-calendar"> CN </div>
         </div>
 
-        <div className="days nameDays">
+        <div className="days">
           {/* {Array.from({
             length: daysInMonth(date.getMonth(), date.getFullYear()),
           }).map((_, index) => (
@@ -108,13 +116,7 @@ const Calendar = () => {
               {index + 1}
             </div>
           ))} */}
-          <div className="item1 item-calendar"> T2 </div>
-          <div className="item2 item-calendar"> T3 </div>
-          <div className="item3 item-calendar"> T4 </div>
-          <div className="item4 item-calendar"> T5 </div>
-          <div className="item5 item-calendar"> T6 </div>
-          <div className="item6 item-calendar"> T7 </div>
-          <div className="item7 item-calendar"> CN </div>
+       
           {days.map((day) => (
             <div
               key={day}
@@ -136,10 +138,10 @@ const Calendar = () => {
             <ul>
               {tasks[selectedDay] ? (
                 tasks[selectedDay].map((task, index) => (
-                  <li key={index} dangerouslySetInnerHTML={{ __html: task }} />
+                  <div className="calendar-noti"> <li key={index} dangerouslySetInnerHTML={{ __html: task }} /></div>
                 ))
               ) : (
-                <li>Không có công việc nào trong ngày {selectedDay} </li>
+                <div className="calendar-noti"><li>Không có công việc nào trong ngày {selectedDay} </li></div>
               )}
             </ul>
           </div>

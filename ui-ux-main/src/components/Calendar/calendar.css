@@ -15,6 +15,7 @@
   border-radius: 10px;
   /* transform: translateY(35px); */
   transform: translate(60px, 50px);
+  margin-left: 50px;
 }
 
 .headerTask {
@@ -38,8 +39,10 @@
   border: 1px solid #000;
   border-radius: 10px;
   transform: translateY(50px);
+  
 }
 .calendar {
+  padding-top: 50px;
   display: grid;
   grid-template-columns: repeat(2, 700px 10px);
 
@@ -47,12 +50,13 @@
   /* height: 10px; */
   margin: 0 auto;
   transform: translate(-70px, -10px);
+  margin-left: 350px;
 }
 
 .header-calendar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   height: 50px;
   border-bottom: 1px solid #000;
   border-radius: 10px;
@@ -62,6 +66,21 @@
   /* margin-top: 0px; */
   /* transform: translateY(-20px); */
 }
+
+/* CSS cho nút button */
+.button {
+  background-color: #b9e2cf; /* Màu nền của nút */
+  color: #000; /* Màu chữ của nút */
+  border: #000; /* Loại bỏ viền của nút */
+  padding: 5px 5px; /* Kích thước lề của nút */
+  border-radius: 50px; /* Bo tròn góc của nút */
+  cursor: pointer; /* Hiển thị con trỏ tay khi rê chuột qua nút */
+ 
+}
+
+
+
+
 
 .title {
   font-size: 25px;
@@ -74,20 +93,14 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-auto-rows: 30px;
-  gap: 12px;
+  gap: 3px;
   /* row-gap: 5px; */
   margin-top: 200px;
-  transform: translate(-5px, -120px);
+  transform: translate(-5px, -140px);
+  padding-left: 10px;
 }
 
-.item-calendar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #40b68d;
-  border: 1px solid #000;
-  border-radius: 10px;
-}
+
 
 .days {
   display: grid;
@@ -105,11 +118,11 @@
   justify-content: center;
   border: 1px solid #000;
   border-radius: 10px;
-  transform: translate(6px, -120px);
+  transform: translate(6px, 40px);
 }
 
 .day-calendar.today {
-  background-color: #f0c674;
+  background-color: #E7FC93;
   color: #000;
   font-weight: bold;
 }
@@ -144,4 +157,20 @@
   padding: 10px;
   margin-bottom: 5px;
   border-radius: 5px;
+}
+
+.item-calendar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #40b68d;
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 90px;
+  height: 40px;
+}
+
+
+.calendar-noti {
+  padding: 10px;
 }

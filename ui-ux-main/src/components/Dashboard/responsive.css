@@ -1,0 +1,110 @@
+@media (max-width: 768px) {
+    .container{
+        width: calc(100% - 50px);
+        padding: 10px;
+        padding-top: 5%;
+        margin-left: 13%;
+        overflow-y: auto;
+    }
+
+    .container-header .inner-list .inner-item1, 
+    .container-header .inner-list .inner-item2,
+    .container-header .inner-list .inner-item3{
+        font-size: 14px;
+        width: 32%;
+        height: 50px;
+    }
+
+    .container-header .inner-list .inner-item1 svg, 
+    .container-header .inner-list .inner-item2 svg,
+    .container-header .inner-list .inner-item3 svg{
+        display: none;
+    }
+
+    .container-header .inner-list .inner-item1 h1, 
+    .container-header .inner-list .inner-item2 h1,
+    .container-header .inner-list .inner-item3 h1{
+        font-size: 16px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .container-header .inner-list .inner-item1 p, 
+    .container-header .inner-list .inner-item2 p{
+        font-size: 12px;
+        top: 15px;
+        /* width: 70%; */
+        text-align: start;
+        left: 32px;
+    } 
+    .container-header .inner-list .inner-item3 p{
+        font-size: 12px;
+        top: 13px;
+        /* width: 70%; */
+        text-align: start;
+        left: 27px;
+    }
+
+    .container-main .inner-list .inner-row{
+        flex-direction: column;
+        margin: 0;
+    }
+    
+    .container-main .inner-item{
+        width: 90%;
+        height: 200px;
+        margin-bottom: 15px;
+    }
+
+    .container-main .inner-item .inner-title{
+        font-size: 12px;
+        width: 90%;
+        top: 10px;
+        left: 15px;
+        padding: 5px;
+        text-align: center;
+        /* display: none; */
+    }
+
+    .container-main .inner-item button {
+        /* top: 10px;
+        right: 5px;
+        padding: 5px; */
+        display: none !important;
+    }
+
+    .container-main .inner-item .graph{
+    scale: 0.65;
+    left: -90px;
+    top: 30px;
+   }
+    .container-main .inner-item .pie-chart{
+    bottom: -90px;
+    left: -30px;
+    width: 340px;
+    height: 340px;
+    scale: 0.6;
+  }
+    .container-main .inner-item table {
+    font-size: 12px;
+     width: 90%;
+     margin-top: 20%;
+     margin-left: auto;
+     margin-right: auto;
+     border-collapse: collapse;
+     border-spacing: 10px;
+   }
+    .container-main .inner-item th, td {
+     padding: 5px;
+     text-align: center;
+     transition: all 0.1s;
+   }
+
+      .container-main .inner-item .bar-chart{
+    position: relative;
+    bottom: -40px;
+    left: 10px;
+    width: 95%;
+    height: 95%;
+   }
+}

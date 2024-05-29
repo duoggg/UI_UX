@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';import Sider from '../Sider';
 import Header from '../Header';
 import './setting.css';
+import './settingResponsive.css';
 import avatar from '../../assets/avatar.jpg'
 import { Link } from 'react-router-dom';
 
@@ -81,25 +82,25 @@ class Setting extends React.Component {
       <div className="setting-item">
         {/* Icon */}
         <div className="item-content">
-          <h4>Ngôn ngữ</h4>
+          <h3>Ngôn ngữ</h3>
           <p>Ngôn ngữ hiển thị trên giao diện trang web, ngôn ngữ ưa thích</p>
         </div>
         <div className="dropdown">
-         <button className="dropdown-button" ref={this.dropdownButtonRef}>{this.state.selectedLanguage}</button>
-         <div className="dropdown-menu">
-             <a onClick={() => this.handleLanguageChange('Tiếng Anh')}>Tiếng Anh</a>
-             <a onClick={() => this.handleLanguageChange('Tiếng Nhật')}>Tiếng Nhật</a>
-             <a onClick={() => this.handleLanguageChange('Tiếng Việt')}>Tiếng Việt</a>
-             <a onClick={() => this.handleLanguageChange('Tiếng Lòng Em')}>Tiếng Lòng Em</a>
-    </div>
-  </div>
+         <button className="dropdown-button-1" ref={this.dropdownButtonRef}>{this.state.selectedLanguage}</button>
+            <div className="dropdown-menu-2">
+                <a onClick={() => this.handleLanguageChange('Tiếng Anh')}>Tiếng Anh</a>
+                <a onClick={() => this.handleLanguageChange('Tiếng Nhật')}>Tiếng Nhật</a>
+                <a onClick={() => this.handleLanguageChange('Tiếng Việt')}>Tiếng Việt</a>
+                <a onClick={() => this.handleLanguageChange('Tiếng Lòng Em')}>Tiếng Lòng Em</a>
+            </div>
+      </div>
       </div>
     </div>
     <div className="setting-section2">
       <div className="setting-item">
         {/* Icon */}
         <div className="item-content">
-          <h4>Thông báo</h4>
+          <h3>Thông báo</h3>
           <p>Khuyến khích bật để chúng tôi có thể hỗ trợ bạn tốt nhất</p>
         </div>
         <Link to="./noti"><button className="edit-button">Chỉnh sửa</button></Link>
@@ -109,7 +110,7 @@ class Setting extends React.Component {
        <div className="setting-item">
         {/* Icon */}
         <div className="item-content">
-          <h4>Chế độ tối</h4>
+          <h3>Chế độ tối</h3>
           <p>Đổi màu nền giao diện</p>
         </div>
         <label className="switch">

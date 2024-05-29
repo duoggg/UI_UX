@@ -1,7 +1,9 @@
 import React from 'react';
 import Sider from '../Sider';
 import Header from '../Header';
+import { useState } from 'react';
 import './KPIs.css';
+import './KPIsResponsive.css';
 import { 
   IconCalender,
 } from '../../assets/index';
@@ -18,8 +20,115 @@ class KPIs extends React.Component {
       currentSlide: 0,
       itemsPerPage:3,
       showPopup: false,
-      showForecastPopUp : false 
+      showForecastPopUp : false,
+      dataList:  [
+        {
+          title: 'GPA 4.0',
+          startDate: '03/03/23',
+          endDate: '07/07/24',
+          progress: 80,
+          tags: ['Lý thuyết', 'Thực hành', 'Bài tập'],
+          details:[
+            {
+              name: 'Lý thuyết',
+              targetHours: 100,
+              completedHours: 70,
+              Task: '30/100',
+            },
+            {
+              name: 'Thực hành',
+              targetHours: 200,
+              completedHours: 100,
+              Task: '130/200',
+            },
+            {
+              name: 'Bài tập',
+              targetHours: 200,
+              completedHours: 150,
+              Task: '180/200',
+            },
+            {
+              name: 'Ngiên cứu',
+              targetHours: 500,
+              completedHours: 550,
+              Task: '180/300',
+            }
+          ]
+        },
+        {
+          title: 'IT Nihon',
+          startDate: '01/01/23',
+          endDate: '04/04/24',
+          progress: 60,
+          tags: ['HTML', 'CSS', 'JS'],
+          details:[
+            {
+              name: 'Lý thuyết',
+              targetHours: 100,
+              completedHours: 70,
+              Task: '30/100',
+            },
+            {
+              name: 'Thực hành',
+              targetHours: 200,
+              completedHours: 100,
+              Task: '130/200',
+            },
+            {
+              name: 'Bài tập',
+              targetHours: 200,
+              completedHours: 150,
+              Task: '180/200',
+            },
+            {
+              name: 'Gì gì đó',
+              targetHours: 200,
+              completedHours: 150,
+              Task: '180/200',
+            }
+          ]
+    
+        },
+        {
+          title: 'Tiếng Nhật',
+          startDate: '01/01/23',
+          endDate: '04/04/24',
+          progress: 40,
+          tags: ['Kanji', 'Kaiwa', 'Choukai'],
+          details:[
+            {
+              name: 'Lý thuyết',
+              targetHours: 100,
+              completedHours: 70,
+              Task: '30/100',
+            },
+            {
+              name: 'Thực hành',
+              targetHours: 200,
+              completedHours: 100,
+              Task: '130/200',
+            },
+            {
+              name: 'Bài tập',
+              targetHours: 200,
+              completedHours: 150,
+              Task: '180/200',
+            },
+            {
+              name: 'Gì gì đó',
+              targetHours: 200,
+              completedHours: 150,
+              Task: '180/200',
+            }
+          ]
+        },]
     };
+  }
+
+  addToList = (data) => {
+    this.setState(prevState => ({
+      dataList: [...prevState.dataList, data]
+    }));
   }
 
   toggleDetails = (kpiIndex) => {
@@ -62,109 +171,111 @@ class KPIs extends React.Component {
   };
 
 
+  
+
 
     render() {
         const kpis = [
-    {
-      title: 'GPA 4.0',
-      startDate: '03/03/23',
-      endDate: '07/07/24',
-      progress: 80,
-      tags: ['Lý thuyết', 'Thực hành', 'Bài tập'],
-      details:[
-        {
-          name: 'Lý thuyết',
-          targetHours: 100,
-          completedHours: 70,
-          Task: '30/100',
-        },
-        {
-          name: 'Thực hành',
-          targetHours: 200,
-          completedHours: 100,
-          Task: '130/200',
-        },
-        {
-          name: 'Bài tập',
-          targetHours: 200,
-          completedHours: 150,
-          Task: '180/200',
-        },
-        {
-          name: 'Gì gì đó',
-          targetHours: 200,
-          completedHours: 150,
-          Task: '180/200',
-        }
-      ]
-    },
-    {
-      title: 'IT Nihon',
-      startDate: '01/01/23',
-      endDate: '04/04/24',
-      progress: 60,
-      tags: ['HTML', 'CSS', 'JS'],
-      details:[
-        {
-          name: 'Lý thuyết',
-          targetHours: 100,
-          completedHours: 70,
-          Task: '30/100',
-        },
-        {
-          name: 'Thực hành',
-          targetHours: 200,
-          completedHours: 100,
-          Task: '130/200',
-        },
-        {
-          name: 'Bài tập',
-          targetHours: 200,
-          completedHours: 150,
-          Task: '180/200',
-        },
-        {
-          name: 'Gì gì đó',
-          targetHours: 200,
-          completedHours: 150,
-          Task: '180/200',
-        }
-      ]
-
-    },
-    {
-      title: 'Tiếng Nhật',
-      startDate: '01/01/23',
-      endDate: '04/04/24',
-      progress: 40,
-      tags: ['Kanji', 'Kaiwa', 'Choukai'],
-      details:[
-        {
-          name: 'Lý thuyết',
-          targetHours: 100,
-          completedHours: 70,
-          Task: '30/100',
-        },
-        {
-          name: 'Thực hành',
-          targetHours: 200,
-          completedHours: 100,
-          Task: '130/200',
-        },
-        {
-          name: 'Bài tập',
-          targetHours: 200,
-          completedHours: 150,
-          Task: '180/200',
-        },
-        {
-          name: 'Gì gì đó',
-          targetHours: 200,
-          completedHours: 150,
-          Task: '180/200',
-        }
-      ]
-    },];
+          {
+            title: 'GPA 4.0',
+            startDate: '03/03/23',
+            endDate: '07/07/24',
+            progress: 80,
+            tags: ['Lý thuyết', 'Thực hành', 'Bài tập'],
+            details:[
+              {
+                name: 'Lý thuyết',
+                targetHours: 100,
+                completedHours: 70,
+                Task: '30/100',
+              },
+              {
+                name: 'Thực hành',
+                targetHours: 200,
+                completedHours: 100,
+                Task: '130/200',
+              },
+              {
+                name: 'Bài tập',
+                targetHours: 200,
+                completedHours: 150,
+                Task: '180/200',
+              },
+              {
+                name: 'Gì gì đó',
+                targetHours: 200,
+                completedHours: 150,
+                Task: '180/200',
+              }
+            ]
+          },
+          {
+            title: 'IT Nihon',
+            startDate: '01/01/23',
+            endDate: '04/04/24',
+            progress: 60,
+            tags: ['HTML', 'CSS', 'JS'],
+            details:[
+              {
+                name: 'Lý thuyết',
+                targetHours: 100,
+                completedHours: 70,
+                Task: '30/100',
+              },
+              {
+                name: 'Thực hành',
+                targetHours: 200,
+                completedHours: 100,
+                Task: '130/200',
+              },
+              {
+                name: 'Bài tập',
+                targetHours: 200,
+                completedHours: 150,
+                Task: '180/200',
+              },
+              {
+                name: 'Gì gì đó',
+                targetHours: 200,
+                completedHours: 150,
+                Task: '180/200',
+              }
+            ]
+      
+          },
+          {
+            title: 'Tiếng Nhật',
+            startDate: '01/01/23',
+            endDate: '04/04/24',
+            progress: 40,
+            tags: ['Kanji', 'Kaiwa', 'Choukai'],
+            details:[
+              {
+                name: 'Lý thuyết',
+                targetHours: 100,
+                completedHours: 70,
+                Task: '30/100',
+              },
+              {
+                name: 'Thực hành',
+                targetHours: 200,
+                completedHours: 100,
+                Task: '130/200',
+              },
+              {
+                name: 'Bài tập',
+                targetHours: 200,
+                completedHours: 150,
+                Task: '180/200',
+              },
+              {
+                name: 'Gì gì đó',
+                targetHours: 200,
+                completedHours: 150,
+                Task: '180/200',
+              }
+            ]
+          },];
         return(
             <>
             <Sider/>
@@ -181,16 +292,16 @@ class KPIs extends React.Component {
           </button>
         </div>  
           {this.state.showPopup && (
-            <CreateGoal onClose={this.closePopup} />
+            <CreateGoal onClose={this.closePopup} addToList={this.addToList} />
           )}
-          {kpis.map((kpi, index) => (
+          {this.state.dataList.map((kpi, index) => (
             <div key={index} className="kpi-item">
               <div className="kpi-header">
                 <div>
                 {kpi.tags.map((tag, tagIndex) => (
                   <span key={tagIndex} className="kpi-tag">{tag}</span>
                 ))}</div>
-                <FontAwesomeIcon icon={faAngleDown} onClick={() => this.toggleDetails(index)}/>
+                 <FontAwesomeIcon icon={faAngleDown} onClick={() => this.toggleDetails(index)}/>
                 
               </div>
                
@@ -214,7 +325,7 @@ class KPIs extends React.Component {
                 <>
               <div className="kpi-details">
                 <button  onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] - 1)} disabled={this.state.currentSlide[index] === 0} >
-                  <FontAwesomeIcon icon={faAngleLeft} className='icon'/>
+                <FontAwesomeIcon icon={faAngleLeft} className='icon'/>
                 </button>
                 {kpi.details.slice(this.state.currentSlide[index] * this.state.itemsPerPage, (this.state.currentSlide[index] + 1) * this.state.itemsPerPage).map((detail) => (
                   <div className="detail-item" key={detail.name}>
@@ -244,7 +355,7 @@ class KPIs extends React.Component {
                 ))}
               
                 <button onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] + 1)}  disabled={this.state.currentSlide[index] === Math.ceil(kpi.details.length / this.state.itemsPerPage) - 1} >
-                  <FontAwesomeIcon icon={faAngleRight} className='icon'/>
+                <FontAwesomeIcon icon={faAngleRight} className='icon'/>
                 </button>
                 
               </div>

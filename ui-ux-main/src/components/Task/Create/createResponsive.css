@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+    .create-kpi-container form {
+      transform: translateY(-250%);
+      width: 80% !important; /* Giảm độ rộng của form */
+    }
+  
+    .date input {
+      width: 45% !important; /* Điều chỉnh chiều rộng của input ngày tháng */
+      margin-right: 0 !important; /* Xóa margin phải */
+    }
+  
+    .date .select {
+      margin-right: 0 !important; /* Xóa margin phải */
+    }
+  
+    .task-create-button {
+      width: 50% !important; /* Điều chỉnh chiều rộng của nút tạo task */
+      margin-left: 0 !important; /* Xóa margin trái */
+    }
+  
+    .task-create-button.Done {
+      margin-left: 0 !important; /* Xóa margin trái */
+    }
+  
+    .task-create-button.Close {
+      margin-left: 0 !important; /* Xóa margin trái */
+    }
+  
+    .category-details input {
+      width: 45% !important; /* Điều chỉnh chiều rộng của input trong chi tiết danh mục */
+    }
+  }
+  

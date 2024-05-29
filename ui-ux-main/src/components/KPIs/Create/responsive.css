@@ -1,0 +1,52 @@
+@media (max-width: 768px) {
+    .create-kpi-container form{
+        margin-top: 350%;
+    }
+  .create-kpi-container form input {
+    font-size: 1rem !important; /* Giảm font size cho input */
+  }
+
+  .date-create-kpi {
+    flex-direction: column; /* Xếp chồng các phần tử trong date-create-kpi */
+    align-items: flex-start; /* Căn lề trái các phần tử */
+  }
+
+  .name-create-kpi{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .date-create-kpi input {
+    width: 100% !important; /* Input ngày tháng chiếm toàn bộ chiều rộng */
+    margin-bottom: 10px; /* Khoảng cách giữa các input */
+  }
+
+  .name-create-kpi input{
+    width: 38% !important;
+  }
+
+
+  .category-details {
+    flex-direction: column; /* Xếp chồng các phần tử trong category-details */
+    align-items: flex-start; /* Căn lề trái các phần tử */
+  }
+
+  .category-details input {
+    width: 100% !important; /* Input loại chiếm toàn bộ chiều rộng */
+    margin-bottom: 10px; /* Khoảng cách giữa các input */
+  }
+
+  .select {
+    width: 100%; /* Select chiếm toàn bộ chiều rộng */
+  }
+
+  .kpi-create-button {
+    width: 48%; /* Điều chỉnh width cho nút Done và Close */
+    margin-left: 0 !important; /* Loại bỏ margin-left */
+    margin-bottom: 10px; /* Khoảng cách giữa các nút */
+  }
+
+  .kpi-create-button.Done {
+    margin-left: 0 !important; /* Loại bỏ margin-left */
+  }
+}

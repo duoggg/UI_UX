@@ -1,0 +1,53 @@
+@media (max-width: 767px) {
+    .profile-container {
+        width: calc(85% - 50px);
+        margin: 20px auto;
+        margin-left: 85px; 
+    }
+
+  .profile-container .avatar {
+   width: 80px;
+   height: 80px;
+   
+ }
+
+    .profile-container .password-section {
+        width: 100%; 
+    }
+
+    .profile-container h3 {
+      font-size: 16px;
+      margin-left: 15px;
+      margin-top: 15px;
+      width: 60%; 
+    }
+
+    .profile-infor {
+        flex-direction: column; 
+        gap: 5px;
+        font-size: 14px;
+        margin: 10px 5%; 
+    }
+
+    .profile-infor-text {
+      margin-left: 2px;
+    }
+
+    .profile-infor .profile-input{
+      width: 100%;
+      margin-bottom: 5px; 
+    }
+    .profile-infor .dropdown {
+        width: 40%;
+        margin-bottom: 5px; 
+    }
+
+    .profile-container .dropdown-button {
+        margin-right: 0; 
+        width: 100% !important;
+    }
+
+    .profile-container .update {
+        width: 40%; 
+    }
+}
