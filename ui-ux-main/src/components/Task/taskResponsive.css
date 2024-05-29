@@ -1,0 +1,97 @@
+@media (max-width: 768px) {
+    .task-container {
+      width: 80%; /* Chiều rộng của task container trở thành 100% */
+      margin-left: 0; /* Xóa margin trái */
+      padding: 10px; /* Giảm padding */
+      transform: translateX(20%);
+    }
+
+    .task-container h1{
+      font-size: 20px;
+    }
+
+    .category-title{
+      font-size: 12px;
+    }
+    
+      .task-items button {
+        display: none; /* Ẩn nút trong category */
+    }
+    .task-header {
+      margin-top: 0;
+      margin-bottom: 10px; /* Tăng khoảng cách giữa header và task container */
+      
+      align-items: stretch; /* Kéo dãn các phần tử của header */
+    }
+    .task-items {
+  display: flex;
+  flex-direction: column; /* Sắp xếp các mục theo chiều dọc */
+  margin-bottom: 20px; 
+  flex-wrap: wrap;
+  max-height: none; /* Thiết lập chiều cao tối đa của phần tử, thay đổi giá trị này tùy thuộc vào yêu cầu của bạn */
+}
+      
+    .active {
+      width: 100%; /* Điều chỉnh chiều rộng của các active button */
+      margin: 5px 0; /* Tạo khoảng cách giữa các active button */
+    }
+  
+    .add-task-button {
+      margin-top: 9px;
+      font-size: 0;
+      width: 7vw; /* Điều chỉnh chiều rộng của nút thêm task */
+      height: 7vw;
+      border-radius: 50%;
+      }
+
+    .add-task-button span{
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      font-size: 20px !important;
+      font-weight: 600;
+    }
+  
+    .task-child {
+        display: flex;
+       
+        flex-direction: column; /* Xếp các task theo chiều dọc */
+        gap: 10px; /* Khoảng cách 10px giữa các task */
+        max-height: none; /* Chiều cao tối đa của task-items */
+       
+      
+      }
+      
+      .task-item {
+        width: 110%;
+        flex:auto;
+        border-radius: 20;
+        transform: translateX(-50px);
+      }
+    .task-item-header {
+        transform: translateY(-10px);
+        display: flex;/* Đổi hướng hiển thị của header task item thành dọc */
+      align-items: flex-start; /* Căn trái các phần tử của header task item */
+    }
+
+    .task-item-header h3{
+      font-size: 16px;
+    }
+  
+    .task-info .item {
+        gap: 2px; /* Giảm khoảng cách dưới của mỗi item */
+      }
+    .task-priority {
+      width: auto; /* Điều chỉnh chiều rộng của priority để tự động điều chỉnh theo nội dung */
+      margin-top: 5px; /* Tạo khoảng cách giữa các priority */
+    }
+  .task-info-status{
+    width: 130px;
+  }
+    .CV-title {
+      font-size: 14px;
+      padding-left: 0; /* Xóa padding trái của CV title */
+      margin-top: 5px; /* Tạo khoảng cách giữa CV title và task item */
+    }
+  }
+  

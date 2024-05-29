@@ -1,0 +1,104 @@
+
+@media (max-width: 767px) {
+  .kpis-list {
+    width: calc(90% - 50px);
+    margin: 0 70px; /* Căn giữa danh sách KPI */
+    padding: 10px;
+  }
+
+  .list-header {
+    align-items: center; /* Căn lề trái tiêu đề và nút */
+    margin-bottom: 20px;
+  }
+
+  .list-header h1{
+    font-size: 20px;
+  }
+
+  .add-kpi-button {
+    margin-top: 10px; /* Khoảng cách giữa tiêu đề và nút */
+    width: 40%; /* Nút thêm KPI chiếm toàn bộ chiều rộng */
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .kpi-item {
+    padding: 15px; /* Giảm padding cho KPI item */
+    padding-bottom: 40px;
+  }
+
+  .kpi-header {
+    align-items: flex-start; /* Căn lề trái tiêu đề và tag */
+  }
+
+  .kpi-tag {
+    margin-bottom: 10px; /* Khoảng cách giữa tag và tiêu đề KPI */
+    font-size: 12px;
+  }
+
+  .kpi-content h3{
+    font-size: 16px;
+    width: auto;
+  }
+
+  .kpi-info {
+    flex-direction: column; /* Xếp chồng thông tin KPI */
+    align-items: flex-start; /* Căn lề trái thông tin KPI */
+  }
+
+  .progress-bar {
+    width: 100%; /* Thanh tiến trình chiếm toàn bộ chiều rộng */
+    margin-bottom: 10px; /* Khoảng cách giữa thanh tiến trình và thông tin khác */
+  }
+
+  .kpi-completion{
+    width: 80% !important;
+    font-size: 14px;
+  }
+
+  .kpi-content {
+    flex-direction: column; /* Xếp chồng nội dung KPI */
+    align-items: flex-start; /* Căn lề trái nội dung KPI */
+  }
+
+  .kpi-date {
+    width: 100%; /* Phần ngày tháng chiếm toàn bộ chiều rộng */
+    margin-bottom: 10px; /* Khoảng cách giữa ngày tháng và chi tiết KPI */
+  }
+
+  .kpi-details {
+    flex-direction: column; /* Xếp chồng chi tiết KPI */
+    align-items: flex-start; /* Căn lề trái chi tiết KPI */
+  }
+
+  .kpi-details button{
+    /* display: none; */
+    margin-left: 48%;
+  }
+
+  .kpi-details .icon{
+  font-size: 20px;
+  transform: rotate(90deg);
+
+}
+
+  .detail-item {
+    width: 100%; /* Chi tiết KPI chiếm toàn bộ chiều rộng */
+    margin-bottom: 10px; /* Khoảng cách giữa các chi tiết KPI */
+    height: auto;
+    padding-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .forecast-button-1{
+    width: 30%;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    padding-top: 3px;
+  }
+  .forecast-button-1 p{
+    width: 100%;
+    font-size: 14px;
+  }
+}

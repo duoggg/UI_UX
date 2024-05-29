@@ -1,5 +1,6 @@
 import React from 'react';
 import './create.css';
+import './createResponsive.css'
 import Select from 'react-select';
 
 class Create extends React.Component {

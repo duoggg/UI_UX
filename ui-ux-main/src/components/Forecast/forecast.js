@@ -1,4 +1,5 @@
 import './forecast.css';
+import './forecastResponsive.css';
 // import { Doughnut} from "react-chartjs-2";
 // import {ArcElement} from 'chart.js'
 // import PieChart from '../PieChart';

@@ -92,7 +92,8 @@ body {
   background-color: #FFFCE7;
   border-radius: 5px;
   border: none;
-  box-shadow: 0 -4px 8px #f9f9f9, 0 4px 8px #00000026;
+  /* box-shadow: 0 -4px 8px #f9f9f9, 0 4px 8px #00000026; */
+  border: 1px solid #282c34;
   flex-shrink: 0;
   width: 150px;
 }
@@ -111,6 +112,8 @@ body {
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 20px;
+  border: 2px solid #EAEAEA;
+  border-radius: 20;
 }
 
 .category-header {
@@ -157,7 +160,19 @@ body {
   height: 50px; */
   background-color: #fffce4;
   border: none;
+
 }
+.task-items .icon{
+  font-size: 50px;
+}
+
+.task-items button {
+  /* width: 40px;
+  height: 50px; */
+  background-color: #fffce4;
+  border: none;
+}
+
 
 .task-child{
   display: flex;
@@ -195,6 +210,10 @@ body {
 
 .task-item-header h3{
   margin: 5px 0;
+}
+
+.icon1{
+  margin-right: 5px;
 }
 
 .task-info {
@@ -258,6 +277,7 @@ body {
   padding: 0 5px;
   border-radius: 5px;
   align-items: center;
+  width: auto;
 }
 
 .task-info-status.incomplete { /* Example for incomplete status */

@@ -2,12 +2,11 @@ import React from 'react';
 import Sider from '../Sider';
 import Header from '../Header';
 import './task.css';
+import './taskResponsive.css';
 import CreateGoal from './Create/create';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faAngleRight, faAngleLeft, } from '@fortawesome/free-solid-svg-icons'
+import {faAngleRight, faAngleLeft, faCalendar, faClock} from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core';
-
-
 class Task extends React.Component {
   constructor(props) {
     super(props);
@@ -20,18 +19,27 @@ class Task extends React.Component {
           category: "Lý thuyết",
           items: [
             { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "completed", priority: "High", statusText:"Đã hoàn thành"  },
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "overdue", priority: "Medium", statusText:"Quá hạn"},
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
+            { title: "Bài tập ITSS", date: "02/03/23", time: "17:00", status: "completed", priority: "Medium", statusText:"Đã hoàn thành" },
+            { title: "Bài tập Web", date: "08/03/23", time: "20:00", status: "overdue", priority: "Low", statusText:"Quá hạn" },
+            { title: "Bài tập AI", date: "10/03/23", time: "22:00", status: "incomplete", priority: "Medium", statusText:"Chưa hoàn thành" },
+            { title: "Bài tập QTPM", date: "05/03/23", time: "15:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
           ],
         },
         {
-          category: "Giảng dạy",
+          category: "Hoạt động",
           items: [
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "completed", priority: "High", statusText:"Đã hoàn thành"  },
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "overdue", priority: "Medium", statusText:"Quá hạn"},
-            { title: "Bài tập UI/UX", date: "01/03/23", time: "16:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
+            { title: "10000 bước chân", date: "08/03/23", time: "23:59", status: "completed", priority: "High", statusText:"Đã hoàn thành"  },
+            { title: "Họp lớp", date: "01/03/23", time: "16:00", status: "overdue", priority: "Medium", statusText:"Quá hạn"},
+            { title: "CLB", date: "01/04/23", time: "18:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
+            { title: "Đọc sách", date: "02/04/23", time: "20:00", status: "incomplete", priority: "Low", statusText:"Chưa hoàn thành" },
+          ],
+        },
+        {
+          category: "Thực hành",
+          items: [
+            { title: "Thực hành KTMT", date: "08/03/23", time: "23:59", status: "completed", priority: "High", statusText:"Đã hoàn thành"  },
+            { title: "Thực hành OOP", date: "01/03/23", time: "16:00", status: "overdue", priority: "Medium", statusText:"Quá hạn"},
+           
           ],
         },
         // Thêm danh mục nhiệm vụ khác tại đây
@@ -66,7 +74,7 @@ class Task extends React.Component {
     return (
       <>
         <Sider />
-        <Header title={"Nhiệm vụ"} />
+        <Header title={"Công việc"} />
         <br />
         <br />
         <br />
@@ -93,7 +101,8 @@ class Task extends React.Component {
             {this.state.tasks.map((category, index) => (
               <div className='task-category' key={index}>
                 <div className='category-header'>
-                  <button className='category-title'>{category.category} ({category.items.length})</button>
+                  <button className='category-title'>{category.category} ({category.items.length})
+                  </button>
                   <div className='category-controls'>
                   </div>
                 </div>
@@ -101,7 +110,7 @@ class Task extends React.Component {
                     <button
                     onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] - 1)}
                     disabled={this.state.currentSlide[index] === 0} >
-                      <FontAwesomeIcon icon={faAngleLeft} className='icon' />
+                        <FontAwesomeIcon icon={faAngleLeft} className='icon' />
                     </button>
                     <div className='task-child'>
                       {category.items.slice(this.state.currentSlide[index] * this.state.itemsPerPage, (this.state.currentSlide[index] + 1) * this.state.itemsPerPage).map((item, itemIndex) => (
@@ -111,8 +120,8 @@ class Task extends React.Component {
                         <span className={`task-priority ${item.priority.toLowerCase()}`}>{item.priority}</span>
                         </div>
                       <div className='task-info'>
-                        <div>{item.date}</div> 
-                        <div>{item.time}</div>
+                        <div><FontAwesomeIcon icon={faCalendar} className='icon1' />{item.date}</div> 
+                        <div><FontAwesomeIcon icon={faClock} className='icon1' />{item.time}</div>
                         <div className={`task-info-status ${item.status.toLowerCase()}`}>{item.statusText}</div>
                       </div>
                       
@@ -123,7 +132,7 @@ class Task extends React.Component {
                     <button 
                     onClick={() => this.handleChangeSlide(index, this.state.currentSlide[index] + 1)}
                     disabled={this.state.currentSlide[index] === Math.ceil(category.items.length / this.state.itemsPerPage) - 1}>
-                    <FontAwesomeIcon icon={faAngleRight} className='icon' />
+                      <FontAwesomeIcon icon={faAngleRight} className='icon' />
                     </button>
                 </div>
               </div>
