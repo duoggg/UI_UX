@@ -2,6 +2,7 @@ import React from 'react';
 import './create.css';
 import Select from 'react-select';
 import KPIs from '../KPIs';
+import './responsive.css';
 class Create extends React.Component {
 
     constructor(props) {
@@ -101,6 +102,7 @@ class Create extends React.Component {
               name="kpiTitle"
               value={this.state.kpiTitle}
               onChange={this.handleChange}
+              className='kpi-nam'
             />
           </div>
           <div className='date-create-kpi'>

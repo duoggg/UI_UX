@@ -1,5 +1,5 @@
 
-import KPIs from './components/KPIs/index';
+import KPIs from './components/KPIs/KPIs';
 import { Routes,Route } from 'react-router-dom';
 import Task from './components/Task/task';
 import Setting from './components/Setting/setting';
@@ -10,7 +10,7 @@ import Password from './components/Setting/password'
 import Profile from './components/Profile/profile'
 import SettingNotifi from './components/Setting/notifi';
 import Forecast from './components/Forecast/forecast';
-import Calendar from './components/Calendar/calendar';
+import Lich from './components/Calendar/calendar';
 import Login from './components/Login/Login';
 import Register from './components/Register/register';
 function App() {
@@ -20,7 +20,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/dashboard' element={<Dashboard />}/>
-          <Route path='/calendar' element={<Calendar/>}/>
+          <Route path='/calendar' element={<Lich/>}/>
           <Route path='/kpis' element={<KPIs/>}/>
           <Route path='/task' element={<Task/>}/>
           <Route path='/setting' element={<Setting/>}/>

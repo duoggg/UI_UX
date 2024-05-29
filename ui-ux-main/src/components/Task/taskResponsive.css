@@ -5,6 +5,14 @@
       padding: 10px; /* Giảm padding */
       transform: translateX(20%);
     }
+
+    .task-container h1{
+      font-size: 20px;
+    }
+
+    .category-title{
+      font-size: 12px;
+    }
     
       .task-items button {
         display: none; /* Ẩn nút trong category */
@@ -29,7 +37,7 @@
     }
   
     .add-task-button {
-      margin-top: 10px;
+      margin-top: 9px;
       font-size: 0;
       width: 7vw; /* Điều chỉnh chiều rộng của nút thêm task */
       height: 7vw;
@@ -38,7 +46,7 @@
 
     .add-task-button span{
       position: absolute;
-      top: 20px;
+      top: 18px;
       right: 18px;
       font-size: 20px !important;
       font-weight: 600;
@@ -55,24 +63,23 @@
       }
       
       .task-item {
-        width: 150%;
+        width: 110%;
         flex:auto;
         border-radius: 20;
+        transform: translateX(-50px);
       }
     .task-item-header {
         transform: translateY(-10px);
         display: flex;/* Đổi hướng hiển thị của header task item thành dọc */
       align-items: flex-start; /* Căn trái các phần tử của header task item */
     }
-  
-    .task-info {
-        transform: translateY(-15px);
-        display: flex none;
-        gap: 5px;
-        margin: none;
+
+    .task-item-header h3{
+      font-size: 16px;
     }
+  
     .task-info .item {
-        gap: 5px; /* Giảm khoảng cách dưới của mỗi item */
+        gap: 2px; /* Giảm khoảng cách dưới của mỗi item */
       }
     .task-priority {
       width: auto; /* Điều chỉnh chiều rộng của priority để tự động điều chỉnh theo nội dung */

@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
     .create-kpi-container form {
-        transform: translateY(-150%);
+      transform: translateY(-250%);
       width: 80% !important; /* Giảm độ rộng của form */
     }
   

@@ -218,6 +218,10 @@ body {
   margin: 5px 0;
 }
 
+.icon1{
+  margin-right: 5px;
+}
+
 .task-info {
   align-items: start;
   margin: 0 10px;
@@ -278,6 +282,7 @@ body {
   padding: 0 5px;
   border-radius: 5px;
   align-items: center;
+  width: auto;
 }
 
 .task-info-status.incomplete { /* Example for incomplete status */
