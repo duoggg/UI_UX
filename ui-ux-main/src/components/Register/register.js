@@ -1,4 +1,16 @@
 import React from 'react';
+
+import { 
+  DAPAT, 
+  IconCalender,
+  IconDashboard,
+  IconKPI,
+  IconObj,
+  IconSetting,
+  IconSignOut,
+  IconProfile,
+} from '../../assets/index';
+import logo from '../../assets/logo.png';
 import './register.css';
 
 class Register extends React.Component {
@@ -31,6 +43,10 @@ class Register extends React.Component {
             <>
             <div className="register">
             <div className="register-container">
+              <div className='inner-logo'>
+                <img src ={logo}/>
+                <a href='#'><DAPAT/></a>
+              </div>
                 <h2>Đăng Kí</h2>
                 <form onSubmit={this.handleSubmit}>
             <div className="form-group">
