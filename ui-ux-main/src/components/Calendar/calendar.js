@@ -3,7 +3,7 @@ import "./calendar.css";
 import './calendarResponsive.css';
 import Sider from '../Sider';
 import Header from '../Header';
-import { Badge, Calendar } from 'antd';
+import { Badge, Calendar, Modal } from 'antd';
 
 const getListData = (value) => {
   let listData;
@@ -69,30 +69,43 @@ const getListData = (value) => {
   return listData || [];
 };
 
-const getMonthData = (value) => {
-  if (value.month() === 8) {
-    return 1394;
-  }
-};
-
 const Lich = () => {
-  const monthCellRender = (value) => {
-    const num = getMonthData(value);
-    return num ? (
-      <div className="notes-month">
-        <section>{num}</section>
-        <span>Backlog number</span>
-      </div>
-    ) : null;
-  };
+  const handleChange = (event) => {
+    const listData = getListData(event);
+    Modal.info({
+      title: `Nhiệm vụ cần hoàn thành ngày ${event.date()} - ${event.month()} - ${event.year()}`,
+      content: (
+        <div>
+          {listData.length > 0 ? (<ul className="events" >
+            {listData.map((item) => (
+              <li key={item.content}>
+                <Badge status={item.type} text={item.content} />
+              </li>
+            ))}
+          </ul>) : (
+            <>
+            <p>Không có nhiệm vụ</p>
+            </>
+          )}
+        </div>
+      ),
+      onOk() {},
+    });
+  }
 
   const dateCellRender = (value) => {
     const listData = getListData(value);
+    let countWarning = listData.reduce((n, x) => n + (x.type === 'warning'), 0);
+    let countError = listData.reduce((n, x) => n + (x.type === 'error'), 0);
+    let countSuccess = listData.reduce((n, x) => n + (x.type ==='success'), 0);
+
     return (
-      <ul className="events">
-        {listData.map((item) => (
+      <ul className="events" >
+        {listData.splice(0, 1).map((item) => (
           <li key={item.content}>
-            <Badge status={item.type} text={item.content} />
+            <Badge count={countWarning} showZero color="green" style={{width: "10.48vw"}} />
+            <Badge count={countWarning} showZero color="#faad14" style={{width: "10.48vw"}} />
+            <Badge count={countError} style={{width: "10.48vw"}} />
           </li>
         ))}
       </ul>
@@ -101,20 +114,20 @@ const Lich = () => {
 
   const cellRender = (current, info) => {
     if (info.type === 'date') return dateCellRender(current);
-    if (info.type === 'month') return monthCellRender(current);
     return info.originNode;
   };
 
   return (
     <>
-      
-      <Header title={"Lịch"}/>
+      <Sider/>
+      <Header title={"Lịch"}/>      
       <div className="calendar-main">
         <Calendar 
           cellRender={cellRender}
           className="calendar-content"
-        />
-      </div>      
+          onSelect={handleChange}
+        />        
+      </div>        
     </>
   );
 };
