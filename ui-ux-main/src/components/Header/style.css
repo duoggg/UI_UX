@@ -20,6 +20,7 @@
 
 
 .nav {
+  z-index: 2;
   display: block; 
   position: absolute; 
   top: 7.3vh;

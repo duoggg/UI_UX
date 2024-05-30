@@ -1,8 +1,6 @@
 .main {
   position: relative;
   top: 3vh;
-  width: calc(100% - 15%);
-  float: right;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,6 +8,8 @@
   gap: 25px;
 }
 
-.responsive_calendar {
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.9);
+.main .calendar {
+  z-index: 1;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+  background-color: #FFFCE7;
 }

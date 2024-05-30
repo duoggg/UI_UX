@@ -81,7 +81,7 @@ const Home = () => {
           </div>
         <div className="task-reminder">
             <span className="important">Có {importantTasks} công việc cần làm</span> 
-          <Link to="/calendar" className="see-more-button">Xem chi tiết</Link> 
+          <Link to="/calendar-mobile" className="see-more-button">Xem chi tiết</Link> 
         </div>          
         </div>
 

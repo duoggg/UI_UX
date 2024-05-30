@@ -37,7 +37,7 @@ export const Sider = () => {
                 
                 </div>
             </Link>
-            <Link to="/calendar" className='link-tag'>
+            <Link to="/calendar-mobile" className='link-tag'>
             <div
                 className={`inner-item ${selectedItem === 'item2' ? 'selected' : ''}`}
                 onClick={() => handleItemClick('item2')}

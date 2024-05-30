@@ -26,7 +26,7 @@ export const Header = (props) => {
             <Link to="/dashboard" className='link'>Dashboard</Link>
           </li>
           <li>
-            <Link to="/calendar" className='link'>Lịch</Link>
+            <Link to="/calendar-mobile" className='link'>Lịch</Link>
           </li>
           <li>
             <Link to="/kpis" className='link'>KPIs</Link>
