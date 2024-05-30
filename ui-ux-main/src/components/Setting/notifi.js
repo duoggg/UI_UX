@@ -26,11 +26,7 @@ class SettingNotifi extends React.Component{
     render(){
         return(
             <>
-            <Sider />
             <Header title={"Thông báo"} />
-            <br />
-            <br />
-            <br />
             <div class ="notifi-container">
                 <h2>CÀI ĐẶT THÔNG BÁO</h2>
                 <div class="notifi-section">

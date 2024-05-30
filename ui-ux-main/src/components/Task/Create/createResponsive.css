@@ -1,16 +1,31 @@
 @media (max-width: 768px) {
-    .create-kpi-container form {
-      transform: translateY(-250%);
+    .create-task-container form {
+      position: absolute;
+      top: 10%;
       width: 80% !important; /* Giảm độ rộng của form */
+    }
+
+    .date{
+      font-size: 14px;
     }
   
     .date input {
-      width: 45% !important; /* Điều chỉnh chiều rộng của input ngày tháng */
+      padding: 5px !important;
+      width: 45% ; /* Điều chỉnh chiều rộng của input ngày tháng */
       margin-right: 0 !important; /* Xóa margin phải */
+    }
+
+    .date .deadline{
+      width: 70% !important;
     }
   
     .date .select {
       margin-right: 0 !important; /* Xóa margin phải */
+      width: auto !important;
+    }
+
+    .category{
+      font-size: 14px;
     }
   
     .task-create-button {
@@ -29,5 +44,13 @@
     .category-details input {
       width: 45% !important; /* Điều chỉnh chiều rộng của input trong chi tiết danh mục */
     }
+
+    .css-1nmdiq5-menu{
+      color: black;
+      
+    }
+     .css-qbdosj-Input{
+      font-size: 12px !important;
+     }
   }
   

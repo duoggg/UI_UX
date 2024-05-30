@@ -1,8 +1,8 @@
 
 @media (max-width: 767px) {
   .kpis-list {
-    width: calc(90% - 50px);
-    margin: 0 70px; /* Căn giữa danh sách KPI */
+    width: 90%;
+    margin: 0 5%; /* Căn giữa danh sách KPI */
     padding: 10px;
   }
 
@@ -24,7 +24,7 @@
 
   .kpi-item {
     padding: 15px; /* Giảm padding cho KPI item */
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
 
   .kpi-header {
@@ -52,7 +52,7 @@
   }
 
   .kpi-completion{
-    width: 80% !important;
+    width: 45% !important;
     font-size: 14px;
   }
 

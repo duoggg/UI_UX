@@ -8,7 +8,7 @@ class Create extends React.Component {
     constructor(props) {
     super(props);
     this.state = {
-      kpiTitle: '',
+      taskTitle: '',
       deadline: new Date(), // State cho hạn chót
       category: '',
       showCategoryDetails: false,
@@ -44,7 +44,7 @@ class Create extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    const { kpiTitle, startDate, endDate, category } = this.state;
+    const { taskTitle, startDate, endDate, category } = this.state;
 
     this.props.onClose();
 
@@ -69,10 +69,10 @@ class Create extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    const { kpiTitle, deadline, category, reminderDays, priority } = this.state;
+    const { taskTitle, deadline, category, reminderDays, priority } = this.state;
 
-    const newKpi = {
-      kpiTitle,
+    const newtask = {
+      taskTitle,
       deadline, // Lưu hạn chót
       category,
       reminderDays, // Lưu số ngày nhắc nhở
@@ -80,7 +80,7 @@ class Create extends React.Component {
     };
 
     this.props.onClose();
-    // this.props.onCreate(newKpi); // Truyền dữ liệu KPI mới lên component cha
+    // this.props.onCreate(newtask); // Truyền dữ liệu task mới lên component cha
   };
 
     render(){
@@ -108,18 +108,16 @@ class Create extends React.Component {
 
         return (
             <>
-            <br></br>
-            <br></br>
-            <br></br>
-            <div className="create-kpi-container">
+            
+            <div className="create-task-container">
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label htmlFor="kpiTitle">Tên mục tiêu:</label>
+            <label htmlFor="taskTitle">Tên mục tiêu:</label>
             <input
               type="text"
-              id="kpiTitle"
-              name="kpiTitle"
-              value={this.state.kpiTitle}
+              id="taskTitle"
+              name="taskTitle"
+              value={this.state.taskTitle}
               onChange={this.handleChange}
             />
           </div>
@@ -129,6 +127,7 @@ class Create extends React.Component {
                 type="datetime-local"
                 id="deadline"
                 name="deadline"
+                className='deadline'
                 value={this.state.deadline.toISOString().slice(0, 16)}
                 onChange={(event) =>
                   this.handleDeadlineChange(new Date(event.target.value))
@@ -136,7 +135,7 @@ class Create extends React.Component {
               />
           </div>
           <div className='date'>
-              <label htmlFor="reminderDays">Nhắc nhở tôi trước:</label>
+              <label htmlFor="reminderDays">Nhắc tôi trước:</label>
               <Select
                 isMulti={false}
                 options={reminderOptions}
@@ -165,7 +164,7 @@ class Create extends React.Component {
             
           </div>
           <div>
-        <label htmlFor="category">Danh mục:</label>
+        <label htmlFor="category" className='category'>Danh mục:</label>
         <span className="category-icon" onClick={this.toggleCategoryDetails}>+</span>
 
         {/* Sử dụng react-select */}
