@@ -29,8 +29,8 @@ function App() {
           <Route path='/profile' element={<Profile/>}/>
           <Route path='/forecast' element={<Forecast/>}/>
           <Route path='/login' element={<Login/>}/>
-          <Route path='/' element={<Register/>}/>
-          
+          {/* <Route path='/' element={<Register/>}/> */}
+          {/* <Route path='/' element={<MyComponent/>}/> */}
           {/* <Route path='/Notification' element={<Notification/>}/> */}
         </Routes>
       </BrowserRouter>

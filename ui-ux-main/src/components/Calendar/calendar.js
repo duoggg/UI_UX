@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./calendar.css";
+import './calendarResponsive.css';
 import Sider from '../Sider';
 import Header from '../Header';
 import { Badge, Calendar } from 'antd';
@@ -35,7 +36,7 @@ const getListData = (value) => {
         },
       ];
       break;
-    case 15:
+    case 30:
       listData = [
         {
           type: 'warning',
@@ -106,8 +107,8 @@ const Lich = () => {
 
   return (
     <>
-      <Sider/>
-      <Header title={"Lich"}/>
+      
+      <Header title={"Lịch"}/>
       <div className="calendar-main">
         <Calendar 
           cellRender={cellRender}
