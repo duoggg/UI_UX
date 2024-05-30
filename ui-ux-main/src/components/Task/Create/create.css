@@ -21,14 +21,16 @@
     font-size: 1.1rem !important;
 }
 
-.create-kpi-container form input{
-  width: 98%;
-  margin: 10px 0;
+.kpi-name{
+  width: 90% !important;
   border: 0.1px solid hsl(0,0%,80%);
   color: hsl(0, 0%, 20%);
   border-radius: 4px;
   padding: 10px 7px;
   font-weight: 500 !important;
+}
+.deadline{
+  width: 40% !important;
 }
 
 .date{
@@ -40,14 +42,14 @@
 }
 
 .date input{
-  width: 37.7% !important;
+  width: 37.7%!important ;
   margin-right: 30% !important;
 }
 
 .date .select{
   font-size: 16px;
   font-weight: 400;
-  margin-right: 30% !important;
+  margin-right: 27.5% !important;
 }
 
 .category-icon {

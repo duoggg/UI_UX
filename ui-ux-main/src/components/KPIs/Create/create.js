@@ -147,16 +147,16 @@ class Create extends React.Component {
 
           <input
             type="number"
-            placeholder="Nhập thời gian (giờ)"
+            placeholder="Nhập số giờ"
             value={categoryTime}
             onChange={this.handleCategoryTimeChange}
           />
           </div>
         )}
       </div>
-          <button type="submit" className='Done kpi-create-button'>Tạo</button>
+          <button type="submit" className='Done url-import-button'>Tạo</button>
           {/* <KPIs ref="kpis" /> */}
-          <button type="button" onClick={this.props.onClose} className='Close kpi-create-button'>Hủy</button>
+          <button type="button" onClick={this.props.onClose} className='Close url-import-button'>Hủy</button>
         </form>
       </div>
 

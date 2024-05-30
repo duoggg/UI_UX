@@ -133,6 +133,7 @@ class Create extends React.Component {
                 onChange={(event) =>
                   this.handleDeadlineChange(new Date(event.target.value))
                 }
+                class='deadline'
               />
           </div>
           <div className='date'>

@@ -8,6 +8,7 @@ import {
   IconCalender,
 } from '../../assets/index';
 import CreateGoal from './Create/create';
+import Import from './Create/import';
 import Forecast from '../Forecast/forecast';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faAngleRight, faAngleLeft, faAngleDown} from '@fortawesome/free-solid-svg-icons'
@@ -20,6 +21,7 @@ class KPIs extends React.Component {
       currentSlide: 0,
       itemsPerPage:3,
       showPopup: false,
+      showURL: false,
       showForecastPopUp : false,
       dataList:  [
         {
@@ -158,9 +160,16 @@ class KPIs extends React.Component {
     this.setState({ showPopup: true });
   };
 
+
   closePopup = () => {
     this.setState({ showPopup: false });
   };
+  importURL = () => {
+    this.setState({ showURL: true });
+  };
+  closeURL = () => {
+    this.setState({ showURL: false });
+  }
 
   handleForecast = () => {
     this.setState({ showForecastPopUp: true });
@@ -168,6 +177,10 @@ class KPIs extends React.Component {
 
   closeForecastPopup = () => {
     this.setState({ showForecastPopUp: false });
+  };
+  handleFileUpload = (event) => {
+    const file = event.target.files[0];
+    // Xử lý tập tin được chọn ở đây
   };
 
 
@@ -287,13 +300,34 @@ class KPIs extends React.Component {
        <div className="kpis-list">
         <div className='list-header'>
           <div className='KPI-title'><h1>Danh sách KPIs</h1></div>
+          <div class='add-kpi'>
           <button className="add-kpi-button" onClick={this.handleAddGoal}>
             <span>+</span> Thêm KPI
           </button>
+          <button className="import-kpi-button" onClick={() => document.getElementById('file-input').click()}>
+              <span>+</span> Thêm từ tệp
+            </button>
+            <input
+              type="file"
+              id="file-input"
+              accept=".txt, .pdf, .doc, .docx"
+              style={{ display: 'none' }}
+              onChange={this.handleFileUpload}
+            />
+          <button className="import-url-button" onClick={this.importURL}>
+            <span>+</span> Nhập từ bên ngoài
+          </button>
+          </div>
         </div>  
           {this.state.showPopup && (
             <CreateGoal onClose={this.closePopup} addToList={this.addToList} />
           )}
+          {this.state.showURL && (
+            <Import onClose={this.closeURL}/>
+          ) }
+          {/* {this.state.showImport && (
+            // <CreateGoal onClose={this.closePopup} addToList={this.addToList} />
+          )} */}
           {this.state.dataList.map((kpi, index) => (
             <div key={index} className="kpi-item">
               <div className="kpi-header">
@@ -328,7 +362,7 @@ class KPIs extends React.Component {
                 <FontAwesomeIcon icon={faAngleLeft} className='icon'/>
                 </button>
                 {kpi.details.slice(this.state.currentSlide[index] * this.state.itemsPerPage, (this.state.currentSlide[index] + 1) * this.state.itemsPerPage).map((detail) => (
-                  <div className="detail-item" key={detail.name}>
+                  <div className="detail-item" key={detail.name}>w
                     <h4>{detail.name}</h4>
                     <div className='goal-time-container'>
                     <div className='goal-time-0' > 

@@ -10,7 +10,7 @@ import avatar from '../../assets/avatar.jpg'
         super(props);
         this.dropdownButtonRef = React.createRef();
         this.state = {
-          selectedGender: 'Lựa chọn'
+          selectedGender: 'Nữ'
         };
       }
       componentDidMount() {
@@ -33,7 +33,7 @@ import avatar from '../../assets/avatar.jpg'
         <br />
         <div className="profile-container">
             <img src={avatar} alt="Avatar" className="avatar" />
-            <h5>Đỗ Thùy Dương</h5>
+            <h5>Lê Thi Nhung</h5>
             <div className="profile-section">
                 <h3>Thông tin cơ bản</h3>
                 <div className="profile-infor">
