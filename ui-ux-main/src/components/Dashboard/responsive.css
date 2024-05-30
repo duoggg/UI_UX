@@ -1,10 +1,8 @@
 @media (max-width: 768px) {
     .container{
-        width: calc(100% - 50px);
-        padding: 10px;
-        padding-top: 5%;
-        margin-left: 13%;
-        overflow-y: auto;
+        width: 100%;
+        padding: 0;
+        margin: 1% 3%;
     }
 
     .container-header .inner-list .inner-item1, 
@@ -15,9 +13,8 @@
         height: 50px;
     }
 
-    .container-header .inner-list .inner-item1 svg, 
-    .container-header .inner-list .inner-item2 svg,
-    .container-header .inner-list .inner-item3 svg{
+
+    .container-header {
         display: none;
     }
 
@@ -52,8 +49,8 @@
     
     .container-main .inner-item{
         width: 90%;
-        height: 200px;
-        margin-bottom: 15px;
+        height: 28vh;
+        margin-bottom: 25px;
     }
 
     .container-main .inner-item .inner-title{
@@ -74,16 +71,16 @@
     }
 
     .container-main .inner-item .graph{
-    scale: 0.65;
-    left: -90px;
-    top: 30px;
+    scale: 0.75;
+    left: -50px;
+    top: 25px;
    }
     .container-main .inner-item .pie-chart{
     bottom: -90px;
-    left: -30px;
+    left: -10px;
     width: 340px;
     height: 340px;
-    scale: 0.6;
+    scale: 0.75;
   }
     .container-main .inner-item table {
     font-size: 12px;

@@ -1,38 +1,45 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
-import { IoSearch } from "react-icons/io5";
-import { FaBell } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faBell } from '@fortawesome/free-solid-svg-icons';
 
 export const Header = (props) => {
   const { title } = props;
-  const styleIcon = {
-    fill: "#fff",
-    width: "1.5em",
-    height: "1.5em",
-    cursor: "pointer",
+  const [showNav, setShowNav] = useState(false);
+  const toggleNav = () => {
+    setShowNav(!showNav);
   };
 
   return (
     <>
-      <div className='header'>
-        <div className='inner-title'>
-          <p>{title}</p>
-        </div>
-        <div className='inner-content'>
-          <div className='search-box'>
-            <form action="">
-              <input type="search" required/>
-              <IoSearch className="fa"/>
-            </form>
-          </div>
-          <div className='bell'>
-            <FaBell style={styleIcon}/>
-          </div>
-          <div className='user'>
-            <FaUser style={styleIcon}/>
-          </div>
-        </div>
-      </div>
+      <header className="header">
+      <FontAwesomeIcon className='icon' icon={faBars} onClick={toggleNav}/>
+      <div className="header-title">{title}</div>
+      <FontAwesomeIcon className='icon' icon={faBell}/>
+      <nav className={`nav ${showNav ? 'show' : ''}`}>
+        <ul>
+          <li>
+            <Link to="/home" className='link'>Trang chủ</Link>
+          </li>
+          <li>
+            <Link to="/dashboard" className='link'>Dashboard</Link>
+          </li>
+          <li>
+            <Link to="/calendar" className='link'>Lịch</Link>
+          </li>
+          <li>
+            <Link to="/kpis" className='link'>KPIs</Link>
+          </li>
+          <li>
+            <Link to="/task" className='link'>Nhiệm vụ</Link>
+          </li>
+          <li>
+            <Link to="/setting" className='link'>Cài đặt</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
     </>
   );
 };

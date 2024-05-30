@@ -36,7 +36,7 @@ const getListData = (value) => {
         },
       ];
       break;
-    case 15:
+    case 30:
       listData = [
         {
           type: 'warning',
@@ -107,8 +107,8 @@ const Lich = () => {
 
   return (
     <>
-      <Sider/>
-      <Header title={"Lich"}/>
+      
+      <Header title={"Lịch"}/>
       <div className="calendar-main">
         <Calendar 
           cellRender={cellRender}

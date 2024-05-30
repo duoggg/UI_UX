@@ -1,0 +1,106 @@
+
+
+.content{
+    width: 100%;
+    padding: 1% 3%;
+    margin-top: 3vh;
+    
+}
+
+.calendar{
+    border-radius: 10px;
+    border: solid 0.1px #bbb;
+    box-shadow: 0 -4px 8px #f9f9f9, 0 4px 8px #00000026;
+    padding: 2vh;
+    
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 5px; 
+  border-bottom: solid 1px #bbb;
+}
+
+.calendar .days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    margin: 1%;
+}
+
+.calendar .dates{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin: 1%;
+    gap: 5px;
+}
+
+.dates .today{
+    margin-top: 2vh;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.today.select::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 30px; 
+  height: 30px;
+  border-radius: 50%;
+  background-color: #5cb85c; 
+  z-index: -1;
+}
+
+.select{
+    color: #FFFCE7;
+}
+
+.task-reminder{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+
+.see-more-button {
+  background-color: #5cb85c; 
+  color: white; 
+  border: none; 
+  padding: 8px 15px; 
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 7vh;
+}
+
+.feature {
+  background-color: #5cb85c;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+
+}
+
+.feature .icon {
+  font-size: 30px;
+  margin-bottom: 10%;
+  margin-top: 5%;
+}
