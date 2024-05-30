@@ -13,7 +13,6 @@ import Forecast from './components/Forecast/forecast';
 import Lich from './components/Calendar/calendar';
 import Login from './components/Login/Login';
 import Register from './components/Register/register';
-import MyComponent from './components/mo/Mo';
 function App() {
   return (
     <>
@@ -31,7 +30,6 @@ function App() {
           <Route path='/forecast' element={<Forecast/>}/>
           <Route path='/login' element={<Login/>}/>
           {/* <Route path='/' element={<Register/>}/> */}
-          <Route path='/' element={<MyComponent/>}/>
           {/* <Route path='/Notification' element={<Notification/>}/> */}
         </Routes>
       </BrowserRouter>
