@@ -1,6 +1,7 @@
 @media (max-width: 768px) {
     .create-kpi-container form{
-        margin-top: 350%;
+        position:absolute !important;
+        width: 80% !important;
     }
   .create-kpi-container form input {
     font-size: 1rem !important; /* Giảm font size cho input */
@@ -32,6 +33,9 @@
   }
 
   .category-details input {
+    color: black !important;
+    font-size: 12px !important;
+    padding: 5px !important;
     width: 100% !important; /* Input loại chiếm toàn bộ chiều rộng */
     margin-bottom: 10px; /* Khoảng cách giữa các input */
   }
@@ -44,6 +48,7 @@
     width: 48%; /* Điều chỉnh width cho nút Done và Close */
     margin-left: 0 !important; /* Loại bỏ margin-left */
     margin-bottom: 10px; /* Khoảng cách giữa các nút */
+    margin-top: 10px;
   }
 
   .kpi-create-button.Done {

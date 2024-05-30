@@ -73,11 +73,7 @@ class Task extends React.Component {
   render() {
     return (
       <>
-        <Sider />
         <Header title={"Công việc"} />
-        <br />
-        <br />
-        <br />
         <div className='task-container'>
           <div className='task-header'>
             {/* <div className='filter'>
@@ -91,7 +87,7 @@ class Task extends React.Component {
             </div> */}
             <div className='CV-title'><h1>Danh sách công việc</h1></div>
             <button className="add-task-button" onClick={this.handleAddGoal}>
-              <span>+</span> Thêm công việc
+              + Thêm công việc
             </button>
           </div>
           {this.state.showPopup && (

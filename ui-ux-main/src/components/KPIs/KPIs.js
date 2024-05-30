@@ -278,11 +278,8 @@ class KPIs extends React.Component {
           },];
         return(
             <>
-            <Sider/>
             {<Header title={"KPIs"}/>}
-            <br></br>
-            <br></br>
-            <br></br>
+            
 
        <div className="kpis-list">
         <div className='list-header'>

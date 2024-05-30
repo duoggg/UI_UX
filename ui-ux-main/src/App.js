@@ -15,6 +15,7 @@ import Login from './components/Login/Login';
 import Register from './components/Register/register';
 import CalendarMobile from './components/CalendarMobile';
 
+import Home from './components/Home/Home';
 function App() {
   return (
     <>
@@ -33,6 +34,8 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/' element={<Register/>}/>
           <Route path='/calendar-mobile' element={<CalendarMobile/>}/>
+          <Route path='/register' element={<Register/>}/>
+          <Route path='/home' element={<Home/>}/>
           
           {/* <Route path='/Notification' element={<Notification/>}/> */}
         </Routes>

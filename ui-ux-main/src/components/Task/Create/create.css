@@ -1,4 +1,4 @@
-.create-kpi-container{
+.create-task-container{
   position: fixed; 
   top: 0;
   left: 0;
@@ -12,7 +12,7 @@
   flex-direction: column;
 }
 
-.create-kpi-container form{
+.create-task-container form{
     width: 50% !important;
     background-color: #FFFCE7;
     padding: 30px;
@@ -21,7 +21,7 @@
     font-size: 1.1rem !important;
 }
 
-.create-kpi-container form input{
+.create-task-container form input{
   width: 98%;
   margin: 10px 0;
   border: 0.1px solid hsl(0,0%,80%);

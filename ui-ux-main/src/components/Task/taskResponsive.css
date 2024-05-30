@@ -1,9 +1,8 @@
 @media (max-width: 768px) {
     .task-container {
-      width: 80%; /* Chiều rộng của task container trở thành 100% */
-      margin-left: 0; /* Xóa margin trái */
+      width: 90%; /* Chiều rộng của task container trở thành 100% */
+      margin: 0 5%;
       padding: 10px; /* Giảm padding */
-      transform: translateX(20%);
     }
 
     .task-container h1{
@@ -15,8 +14,16 @@
     }
     
       .task-items button {
-        display: none; /* Ẩn nút trong category */
+        margin-left: -11%;
+        /* display: none;  */
     }
+
+    .task-items .icon{
+    margin: 5px;
+    font-size: 20px;
+    transform: rotate(90deg);
+    }
+
     .task-header {
       margin-top: 0;
       margin-bottom: 10px; /* Tăng khoảng cách giữa header và task container */
@@ -37,20 +44,11 @@
     }
   
     .add-task-button {
-      margin-top: 9px;
-      font-size: 0;
-      width: 7vw; /* Điều chỉnh chiều rộng của nút thêm task */
-      height: 7vw;
-      border-radius: 50%;
+    margin-top: 10px; /* Khoảng cách giữa tiêu đề và nút */
+    width: 40%; /* Nút thêm KPI chiếm toàn bộ chiều rộng */
+    font-size: 14px;
+    padding: 5px;
       }
-
-    .add-task-button span{
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      font-size: 20px !important;
-      font-weight: 600;
-    }
   
     .task-child {
         display: flex;

@@ -26,11 +26,7 @@ import avatar from '../../assets/avatar.jpg'
     render() {
     return(
         <>
-        <Sider />
         <Header title={"Cài đặt > Hồ sơ"} />
-        <br />
-        <br />
-        <br />
         <div className="profile-container">
             <img src={avatar} alt="Avatar" className="avatar" />
             <h5>Đỗ Thùy Dương</h5>

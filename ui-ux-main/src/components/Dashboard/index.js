@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../../components/Header';
-import Sider from '../../components/Sider';
 import './style.css';
 import './responsive.css';
 import { Bar, Line, Pie } from 'react-chartjs-2';
@@ -10,7 +9,7 @@ import { IconBG2 ,IconBG1, IconBG3}  from '../../assets/index';
 const Dashboard = () => {
   return (
     <>      
-      <Sider/>
+      
       {<Header title={"Dashboard"}/>}
         <div>
           <div className="container">
@@ -104,8 +103,8 @@ const Dashboard = () => {
                         datasets: [{
                           backgroundColor: [
                             "#1C712F",
-                            "#518B61",
-                            "#75CA57",
+                            "#002D19",
+                            "#7BE63A",
                           ],
                           data: [20, 70, 10]
                         }]

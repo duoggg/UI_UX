@@ -1,0 +1,51 @@
+@media (max-width: 768px){
+    .notifi-container{
+        width: 90%;
+        margin: 5%;
+    }
+
+    .notifi-container h2 {
+  margin-bottom: 30px;
+}
+
+.notifi-section {
+  background-color: #FFFCE7;
+  border-radius: 8px;
+  padding: 15px 20px; /* Giảm padding trên màn hình nhỏ */
+  box-shadow: 0 -4px 8px #f9f9f9, 0 4px 8px #00000026;
+  width: 100%; /* Chiều rộng 100% trên màn hình nhỏ */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+  flex-wrap: wrap; /* Cho phép các phần tử con xuống dòng khi cần */
+}
+
+.notifi-section {
+    padding: 5px 30px;
+  }
+
+.notifi-content {
+  margin-top: 10px;
+  padding-bottom: 15px;
+  flex: 1; /* Cho .notifi-content chiếm diện tích còn lại */
+}
+
+.notifi-content:last-child {
+  padding-bottom: none;
+}
+
+.notifi-content h4 {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.notifi-section .switch{
+    margin: 0 !important;
+}
+
+.notifi-section .dropdown-button {
+    margin: 0 !important;
+}
+}

@@ -32,12 +32,8 @@ class Setting extends React.Component {
 
     render() {
     return (
-        <>
-        <Sider />
+        <>       
         <Header title={"Cài đặt"} />
-        <br />
-        <br />
-        <br />
         <div className="setting-container">
   <div className="setting-header">
     <img src={avatar} alt="Avatar" className="avatar" />
