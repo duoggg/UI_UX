@@ -1,6 +1,6 @@
 .main {
   position: relative;
-  top: 3vh;
+  top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +9,56 @@
 }
 
 .main .calendar {
+  margin-left: auto;
+  margin-right: auto;
+  scale: 1.1;
+  width: 77%;
   z-index: 1;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
   background-color: #FFFCE7;
+  --rdp-accent-color: green;
+}
+
+.todo-list {
+  position: relative;
+  left: 0;
+}
+
+.todo-list .task-item {
+  width: 144%;
+  background-color: #FFFCE7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 0 0 300px; /* Adjust width as needed */
+  background-color: #DFFFF4;
+  height: auto;
+  margin: unset;
+  margin-bottom: 20px;
+}
+
+.todo-list .task-item.none {
+  width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+  transform: unset;
+}
+
+.todo-list .task-item-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-list .task-info{
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: center;
+}
+
+.todo-list .item-none {
+  text-align: center;
 }
