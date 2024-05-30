@@ -3,6 +3,7 @@ import Sider from '../Sider';
 import Header from '../Header';
 import { useState } from 'react';
 import './KPIs.css';
+import './KPIsResponsive.css';
 import { 
   IconCalender,
 } from '../../assets/index';
@@ -47,10 +48,10 @@ class KPIs extends React.Component {
               Task: '180/200',
             },
             {
-              name: 'Gì gì đó',
-              targetHours: 200,
-              completedHours: 150,
-              Task: '180/200',
+              name: 'Ngiên cứu',
+              targetHours: 500,
+              completedHours: 550,
+              Task: '180/300',
             }
           ]
         },
@@ -174,107 +175,107 @@ class KPIs extends React.Component {
 
 
     render() {
-        // const kpis = [
-        //   {
-        //     title: 'GPA 4.0',
-        //     startDate: '03/03/23',
-        //     endDate: '07/07/24',
-        //     progress: 80,
-        //     tags: ['Lý thuyết', 'Thực hành', 'Bài tập'],
-        //     details:[
-        //       {
-        //         name: 'Lý thuyết',
-        //         targetHours: 100,
-        //         completedHours: 70,
-        //         Task: '30/100',
-        //       },
-        //       {
-        //         name: 'Thực hành',
-        //         targetHours: 200,
-        //         completedHours: 100,
-        //         Task: '130/200',
-        //       },
-        //       {
-        //         name: 'Bài tập',
-        //         targetHours: 200,
-        //         completedHours: 150,
-        //         Task: '180/200',
-        //       },
-        //       {
-        //         name: 'Gì gì đó',
-        //         targetHours: 200,
-        //         completedHours: 150,
-        //         Task: '180/200',
-        //       }
-        //     ]
-        //   },
-        //   {
-        //     title: 'IT Nihon',
-        //     startDate: '01/01/23',
-        //     endDate: '04/04/24',
-        //     progress: 60,
-        //     tags: ['HTML', 'CSS', 'JS'],
-        //     details:[
-        //       {
-        //         name: 'Lý thuyết',
-        //         targetHours: 100,
-        //         completedHours: 70,
-        //         Task: '30/100',
-        //       },
-        //       {
-        //         name: 'Thực hành',
-        //         targetHours: 200,
-        //         completedHours: 100,
-        //         Task: '130/200',
-        //       },
-        //       {
-        //         name: 'Bài tập',
-        //         targetHours: 200,
-        //         completedHours: 150,
-        //         Task: '180/200',
-        //       },
-        //       {
-        //         name: 'Gì gì đó',
-        //         targetHours: 200,
-        //         completedHours: 150,
-        //         Task: '180/200',
-        //       }
-        //     ]
+        const kpis = [
+          {
+            title: 'GPA 4.0',
+            startDate: '03/03/23',
+            endDate: '07/07/24',
+            progress: 80,
+            tags: ['Lý thuyết', 'Thực hành', 'Bài tập'],
+            details:[
+              {
+                name: 'Lý thuyết',
+                targetHours: 100,
+                completedHours: 70,
+                Task: '30/100',
+              },
+              {
+                name: 'Thực hành',
+                targetHours: 200,
+                completedHours: 100,
+                Task: '130/200',
+              },
+              {
+                name: 'Bài tập',
+                targetHours: 200,
+                completedHours: 150,
+                Task: '180/200',
+              },
+              {
+                name: 'Gì gì đó',
+                targetHours: 200,
+                completedHours: 150,
+                Task: '180/200',
+              }
+            ]
+          },
+          {
+            title: 'IT Nihon',
+            startDate: '01/01/23',
+            endDate: '04/04/24',
+            progress: 60,
+            tags: ['HTML', 'CSS', 'JS'],
+            details:[
+              {
+                name: 'Lý thuyết',
+                targetHours: 100,
+                completedHours: 70,
+                Task: '30/100',
+              },
+              {
+                name: 'Thực hành',
+                targetHours: 200,
+                completedHours: 100,
+                Task: '130/200',
+              },
+              {
+                name: 'Bài tập',
+                targetHours: 200,
+                completedHours: 150,
+                Task: '180/200',
+              },
+              {
+                name: 'Gì gì đó',
+                targetHours: 200,
+                completedHours: 150,
+                Task: '180/200',
+              }
+            ]
       
-        //   },
-        //   {
-        //     title: 'Tiếng Nhật',
-        //     startDate: '01/01/23',
-        //     endDate: '04/04/24',
-        //     progress: 40,
-        //     tags: ['Kanji', 'Kaiwa', 'Choukai'],
-        //     details:[
-        //       {
-        //         name: 'Lý thuyết',
-        //         targetHours: 100,
-        //         completedHours: 70,
-        //         Task: '30/100',
-        //       },
-        //       {
-        //         name: 'Thực hành',
-        //         targetHours: 200,
-        //         completedHours: 100,
-        //         Task: '130/200',
-        //       },
-        //       {
-        //         name: 'Bài tập',
-        //         targetHours: 200,
-        //         completedHours: 150,
-        //         Task: '180/200',
-        //       },
-        //       {
-        //         name: 'Gì gì đó',
-        //         targetHours: 200,
-        //         completedHours: 150,
-        //         Task: '180/200',
-        //       }
-        //     ]
-        //   },];
+          },
+          {
+            title: 'Tiếng Nhật',
+            startDate: '01/01/23',
+            endDate: '04/04/24',
+            progress: 40,
+            tags: ['Kanji', 'Kaiwa', 'Choukai'],
+            details:[
+              {
+                name: 'Lý thuyết',
+                targetHours: 100,
+                completedHours: 70,
+                Task: '30/100',
+              },
+              {
+                name: 'Thực hành',
+                targetHours: 200,
+                completedHours: 100,
+                Task: '130/200',
+              },
+              {
+                name: 'Bài tập',
+                targetHours: 200,
+                completedHours: 150,
+                Task: '180/200',
+              },
+              {
+                name: 'Gì gì đó',
+                targetHours: 200,
+                completedHours: 150,
+                Task: '180/200',
+              }
+            ]
+          },];
         return(
             <>
             <Sider/>

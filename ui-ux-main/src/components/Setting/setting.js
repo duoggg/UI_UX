@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';import Sider from '../Sider';
 import Header from '../Header';
 import './setting.css';
+import './settingResponsive.css';
 import avatar from '../../assets/avatar.jpg'
 import { Link } from 'react-router-dom';
 

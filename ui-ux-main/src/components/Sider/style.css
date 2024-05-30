@@ -1,11 +1,12 @@
+/* Các quy tắc CSS hiện có */
 .sider {
   position: fixed;
   overflow: auto;
-  width: 210px ;
+  width: 210px;
   height: 1024px;
   background: #ffffff;
   box-shadow: 0px 5px 5px #888888;
-  
+
 }
 
 .sider .inner-logo {
@@ -13,7 +14,6 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  /* width: 210px; */
 }
 
 .sider .inner-logo a {
@@ -33,7 +33,6 @@
   align-items: center;
   padding-left: 35px;
   transition: all 0.2s ease-out;
- 
 }
 
 .sider .inner-content div p {
@@ -42,14 +41,12 @@
 }
 
 .sider .inner-content div:hover {
-  background: #91D9B5;
+  background: #91d9b5;
   border-radius: 5px;
-  /* margin: 5px 0; */
   transition: all 0.2s ease-out;
-
 }
 
-.sider .inner-content .sign-out{
+.sider .inner-content .sign-out {
   position: absolute;
   bottom: -280px;
   max-width: 250px;
@@ -57,12 +54,12 @@
 }
 
 .selected {
-  background-color: #91D9B5;
+  background-color: #91d9b5;
 }
 
 .link-tag {
   text-decoration: none;
-  color: #081C15;
+  color: #081c15;
 }
 
 .sider {
@@ -71,32 +68,157 @@
   width: 15%;
   height: 1024px;
   background: #1f191900;
-  border-right: #081C15;
-  
+  border-right: #081c15;
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   .sider {
     width: 50px;
     height: 100vh;
+    background: #fff;
   }
 
   .sider .inner-logo {
     margin: 0;
     scale: 0.8;
   }
-  
-.sider .inner-logo a{
-  display: none;
-}
 
-.sider .inner-content .inner-item{
-  margin: 0;
-  padding-left: 18px;
-}
-
-.sider .inner-content .inner-item p {
-    display: none !important;
+  .sider .inner-logo a {
+    display: none;
   }
 
+  .sider .inner-content .inner-item {
+    margin: 0;
+    padding-left: 18px;
+  }
+
+  .sider .inner-content .inner-item p {
+    display: none !important;
+  }
+}
+
+/* Quy tắc CSS hiện có cho calendar */
+.calendar-container {
+  width: 750px;
+  height: 490px;
+  background-color: #fffce7;
+  border: 1px solid #000;
+  border-radius: 10px;
+  transform: translateY(50px);
+}
+
+.calendar {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 700px 10px);
+  width: 600px;
+  margin: 0 auto;
+  transform: translate(-70px, -10px);
+  margin-left: 350px;
+}
+
+.header-calendar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50px;
+  border-bottom: 1px solid #000;
+  border-radius: 10px;
+  transform: translateY(20px);
+}
+
+.title {
+  font-size: 25px;
+  transform: translateX(-270px);
+  font-weight: bold;
+}
+
+.nameDays {
+  width: 740px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 30px;
+  gap: 3px;
+  margin-top: 200px;
+  transform: translate(-5px, -140px);
+  padding-left: 10px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.day-calendar {
+  width: 90px;
+  height: 60px;
+  display: flex;
+  background-color: #dffff4;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  border-radius: 10px;
+  transform: translate(6px, 40px);
+}
+
+.day-calendar.today {
+  background-color: #e7fc93;
+  color: #000;
+  font-weight: bold;
+}
+
+.day-calendar:hover {
+  background-color: rgb(116, 237, 152);
+}
+
+.day-calendar.selected {
+  background-color: #93ce4e;
+  color: #000;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .calendar-container {
+    width: 100%;
+    height: auto;
+    margin-left: 60px; /* Đảm bảo calendar không chồng lên sider */
+    transform: translateY(20px);
+  }
+
+  .calendar {
+    grid-template-columns: 1fr;
+    width: 100%;
+    transform: none;
+    margin-left: 0;
+  }
+
+  .header-calendar {
+    flex-direction: column;
+    transform: none;
+  }
+
+  .title {
+    font-size: 20px;
+    transform: none;
+  }
+
+  .nameDays {
+    width: 100%;
+    transform: none;
+    padding-left: 0;
+  }
+
+  .days {
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 10px;
+  }
+
+  .day-calendar {
+    width: 100%;
+    height: auto;
+    transform: none;
+  }
 }

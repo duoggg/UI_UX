@@ -1,0 +1,111 @@
+@media (max-width: 768px) {
+    .setting-container {
+      width: 80%; /* Chiều rộng đầy đủ */
+      transform: translate(60px, 10px);
+      margin: 0; /* Loại bỏ khoảng cách */
+      padding: 10px; /* Điều chỉnh padding */
+      margin-left: 7px;
+    }
+    
+    .setting-header{
+      margin-top: 10px;
+      margin-bottom: 20px;
+      height: 7vh;
+    }
+      
+  
+    .setting-header .avatar {
+      width: 50px; /* Giảm kích thước avatar */
+      height: 50px; /* Giảm kích thước avatar */
+    }
+  
+    .company-name {
+      margin-left: 10px; /* Bỏ margin-left */
+      font-size: 14px; /* Giảm kích thước font */
+    }
+  
+    .changeacc-button{
+      font-size: 12px;
+      width: 100px !important;
+      margin-right: 25px !important;
+      width: 90%; /* Giảm chiều rộng */
+    }
+
+
+    .edit-button {
+      font-size: 12px;
+      width: 100px !important;
+      margin-right: 10px !important;
+      width: 90%; /* Giảm chiều rộng */
+      }
+  
+    .setting-list {
+      gap: 15px; /* Giảm khoảng cách giữa các phần tử */
+    }
+  
+    .setting-section1 h3{
+      margin: 0;
+      font-size: 18px;
+      width: 100%;
+    }
+    .setting-section2 h3 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 500;
+      width: 100%;
+    }
+    .setting-section1,
+    .setting-section2 {
+      padding: 15px; /* Điều chỉnh padding cho phù hợp */
+      padding-bottom: 0;
+    }
+
+    .setting-section1 p,
+    .setting-section2 p{
+      display: none !important;
+    }
+  
+    .setting-item {
+      align-items: flex-start; /* Canh các phần tử về bên trái */
+      text-align: left; /* Canh trái nội dung văn bản */
+      padding: 7px 0;
+      
+    }
+
+    .setting-item h4{
+      font-size: 14px;
+      font-weight: 500;
+      margin: 0;
+    }
+  
+    .item-content {
+      width: 100%; /* Đảm bảo nội dung rộng toàn bộ */
+      padding-bottom: 10px; /* Thêm khoảng cách dưới */
+    }
+  
+    .setting-item .switch {
+      margin-top: 10px; /* Thêm khoảng cách trên */
+    }
+
+    .setting-item .slider {
+      top: -10px;
+      bottom: 10px;
+    }
+  
+    .setting-item .dropdown {
+      
+    }
+  
+    .setting-item .dropdown-button-1 {
+      height: auto !important;
+    }
+  
+    .dropdown-menu-2 {
+      width: 100% !important; /* Đảm bảo menu dropdown rộng toàn bộ chiều rộng container */
+    }
+  
+    .dropdown-menu-2 a {
+      width: 100%; /* Đảm bảo các liên kết rộng toàn bộ chiều rộng container */
+    }
+  }
+  

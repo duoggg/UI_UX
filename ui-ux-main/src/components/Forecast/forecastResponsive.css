@@ -1,0 +1,101 @@
+
+
+@media (max-width: 768px) {
+  .forecast-container{
+    transform: translateY(-90px);
+    margin-top: 15%;
+  }
+  .container-DuBao {
+    max-width: 90%; /* Điều chỉnh chiều rộng cho màn hình nhỏ */
+    width: 100%;
+    max-height: 90%; /* Giới hạn chiều cao để không tràn màn hình */
+    padding: 20px; /* Giảm padding để phù hợp hơn với màn hình nhỏ */
+  }
+  .forecast-close-button {
+    font-size: 12px;
+    background-color: #A99EA0;
+    padding: 3px;
+    width: 60px;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+    margin-right: 0;
+    transform: translateY(-20px);
+  }
+  
+  h2 {
+    color: #081c15;
+    font: 700 36px Roboto, sans-serif;
+    font-size: 20px;
+    text-align: center; /* Đưa tiêu đề vào giữa */
+  } 
+  
+  
+  
+  .goal-name {
+    margin: 10px 0; /* Điều chỉnh margin trên dưới */
+    color: #081C15;
+    width: 80%;
+    font: 50 16px Roboto, sans-serif;
+  
+  } 
+  
+  .goal-circle-cate {
+    transform: translateY(-10%);
+    width: 30%;
+  }
+  .t1{
+    width: 40%;
+  }
+ .t2{
+  width: 50%;
+ }
+  .goal-name {
+    font-size: 12px; /* Giảm kích thước font cho goal name */
+  }
+
+  .goal {
+    font-size: 12px; /* Giảm kích thước font cho goal */
+  }
+
+  .goal-name1 {
+    width: 100%;
+    height: 100px;
+  }
+  
+  .goal-name1-text {
+    padding-left: 128px;
+    width: 100%;
+    text-wrap: nowrap;
+    transform: translateX(-100px);
+  }
+  
+  .goal-name7 {
+    margin-top: 20px;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    transform: translateY(-20px);
+  }
+
+  
+  .title-1, .title-2{
+    font-size: 15px;
+  }
+  .text-container-forecast {
+    width: 150%;
+     transform: translateX(20px); 
+    padding: 5px; /* Giảm padding để phù hợp hơn với màn hình nhỏ */
+    font-size: 12px;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 50px;
+  }
+
+  
+ 
+
+ 
+}

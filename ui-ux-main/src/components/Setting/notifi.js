@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';import Sider from '..
 import Header from '../Header';
 import avatar from '../../assets/avatar.jpg'
 import './notifi.css';
+import './notifyResponsive.css';
 
 class SettingNotifi extends React.Component{
     constructor(props) {
@@ -26,7 +27,7 @@ class SettingNotifi extends React.Component{
         return(
             <>
             <Sider />
-            <Header title={"Cài đặt thông báo"} />
+            <Header title={"Thông báo"} />
             <br />
             <br />
             <br />
@@ -61,7 +62,7 @@ class SettingNotifi extends React.Component{
                 </div>
                 <div class="notifi-section">
                     <div class="notifi-content">
-                        <h4>Thông báo khi công việc cần hoàn thành trước</h4>
+                        <h4>Thông báo khi công việc cần hoàn thành</h4>
                         </div>
                         <div className="dropdown">
                             <button className="dropdown-button" ref={this.dropdownButtonRef}>{this.state.selectedTime}</button>
