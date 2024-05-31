@@ -3,12 +3,15 @@ import Header from '../Header';
 import avatar from '../../assets/avatar.jpg'
 import './password.css';
 import './passwordResponsive.css';
-
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 class Password extends React.Component{
     render(){
         return(
             <>
             <Header title={"Đổi mật khẩu"} />
+            <Link to='/setting' ><FontAwesomeIcon icon={faArrowLeft} className="back"/></Link>
             <div class="password-container">
                 <img src={avatar} alt="Avatar" class="avatar" />
                 <h5 class="user-name">Đỗ Thùy Dương</h5>

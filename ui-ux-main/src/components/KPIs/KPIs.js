@@ -10,7 +10,7 @@ import {
 import CreateGoal from './Create/create';
 import Forecast from '../Forecast/forecast';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faAngleRight, faAngleLeft, faAngleDown} from '@fortawesome/free-solid-svg-icons'
+import {faAngleRight, faAngleLeft, faAngleDown, faBullseye, faCircleCheck, faListCheck } from '@fortawesome/free-solid-svg-icons'
 
 class KPIs extends React.Component {
     constructor(props) {
@@ -315,6 +315,7 @@ class KPIs extends React.Component {
                   ></div>
                   </div>
                 <span className="kpi-completion">Đã hoàn thành: {kpi.progress}%</span>
+                
               </div>
 
               </div>
@@ -329,19 +330,19 @@ class KPIs extends React.Component {
                     <h4>{detail.name}</h4>
                     <div className='goal-time-container'>
                     <div className='goal-time-0' > 
-                    <div className='goal-time-1'> Mục tiêu </div>
+                    <div className='goal-time-1'><FontAwesomeIcon icon={faBullseye} className='goal-icon'/> Mục tiêu </div>
                     <div className='goal-time-2'> : </div>
                     <div className='goal-time-3'> {detail.targetHours} giờ </div>
                     </div>
 
                     <div className='goal-time-0' > 
-                    <div className='goal-time-1'> Đã làm </div>
+                    <div className='goal-time-1'><FontAwesomeIcon icon={faCircleCheck} className='goal-icon'/>  Đã làm </div>
                     <div className='goal-time-2'> : </div>
                     <div className='goal-time-3'> {detail.completedHours} giờ </div>
                     </div>
         
                     <div className='goal-time-0' > 
-                    <div className='goal-time-1'>Nhiệm vụ </div>
+                    <div className='goal-time-1'><FontAwesomeIcon icon={faListCheck} className='goal-icon'/> Nhiệm vụ </div>
                     <div className='goal-time-2'> : </div>
                     <div className='goal-time-3'> {detail.Task} giờ </div>
                     </div>

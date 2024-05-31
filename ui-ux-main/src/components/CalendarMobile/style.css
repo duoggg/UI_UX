@@ -12,7 +12,7 @@
   margin-left: auto;
   margin-right: auto;
   scale: 1.1;
-  width: 77%;
+  width: auto;
   z-index: 1;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
   background-color: #FFFCE7;
@@ -61,4 +61,8 @@
 
 .todo-list .item-none {
   text-align: center;
+}
+
+.rdp-day_selected, .rdp-day_selected:focus-visible, .rdp-day_selected:hover {
+  scale: 0.9;
 }

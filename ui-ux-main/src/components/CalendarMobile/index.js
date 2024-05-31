@@ -5,7 +5,7 @@ import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import { vi } from "date-fns/locale";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faAngleRight, faAngleLeft, faCalendar, faClock} from '@fortawesome/free-solid-svg-icons';
+import { faClock} from '@fortawesome/free-solid-svg-icons';
 
 const data = [
 
@@ -44,13 +44,23 @@ const data = [
     content: [
       {
         title: "10000 bước chân", 
-        time: "23:59", 
-        priority: "High",
+        time: "17:59", 
+        priority: "Low",
       },
       {
         title: "UI-UX project", 
-        time: "23:59", 
+        time: "21:00", 
         priority: "High",
+      },
+      {
+        title: "AI project", 
+        time: "22:00", 
+        priority: "High",
+      },
+      {
+        title: "10 Kanji", 
+        time: "23:30", 
+        priority: "Medium",
       }
     ],
   },

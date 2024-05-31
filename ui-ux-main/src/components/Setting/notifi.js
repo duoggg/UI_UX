@@ -3,7 +3,9 @@ import Header from '../Header';
 import avatar from '../../assets/avatar.jpg'
 import './notifi.css';
 import './notifyResponsive.css';
-
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 class SettingNotifi extends React.Component{
     constructor(props) {
         super(props);
@@ -27,6 +29,7 @@ class SettingNotifi extends React.Component{
         return(
             <>
             <Header title={"Thông báo"} />
+            <Link to='/setting' ><FontAwesomeIcon icon={faArrowLeft} className="back"/></Link>
             <div class ="notifi-container">
                 <h2>CÀI ĐẶT THÔNG BÁO</h2>
                 <div class="notifi-section">

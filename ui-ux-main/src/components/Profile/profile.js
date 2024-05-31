@@ -4,6 +4,9 @@ import Header from '../Header';
 import './profile.css';
 import './profileResppnsive.css'
 import avatar from '../../assets/avatar.jpg'
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
  class Profile extends React.Component {
 
     constructor(props) {
@@ -26,7 +29,8 @@ import avatar from '../../assets/avatar.jpg'
     render() {
     return(
         <>
-        <Header title={"Cài đặt > Hồ sơ"} />
+        <Header title={"Hồ sơ"} />
+        <Link to='/setting' ><FontAwesomeIcon icon={faArrowLeft} className="back"/></Link>
         <div className="profile-container">
             <img src={avatar} alt="Avatar" className="avatar" />
             <h5>Đỗ Thùy Dương</h5>

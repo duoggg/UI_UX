@@ -24,7 +24,8 @@
 
   .kpi-item {
     padding: 15px; /* Giảm padding cho KPI item */
-    padding-bottom: 20px;
+    padding-bottom:30px;
+    position: relative;
   }
 
   .kpi-header {
@@ -62,8 +63,13 @@
   }
 
   .kpi-date {
+    justify-content: flex-start;
     width: 100%; /* Phần ngày tháng chiếm toàn bộ chiều rộng */
     margin-bottom: 10px; /* Khoảng cách giữa ngày tháng và chi tiết KPI */
+  }
+
+  .Calender svg{
+    margin-right: 5px;
   }
 
   .kpi-details {
@@ -91,6 +97,9 @@
   }
 
   .forecast-button-1{
+    position: absolute;
+    right: 10%;
+    bottom: 1.5%;
     width: 30%;
     margin: 0;
     text-align: center;

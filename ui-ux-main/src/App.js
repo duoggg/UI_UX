@@ -10,7 +10,6 @@ import Password from './components/Setting/password'
 import Profile from './components/Profile/profile'
 import SettingNotifi from './components/Setting/notifi';
 import Forecast from './components/Forecast/forecast';
-import Lich from './components/Calendar/calendar';
 import Login from './components/Login/Login';
 import Register from './components/Register/register';
 import CalendarMobile from './components/CalendarMobile';
@@ -23,7 +22,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/dashboard' element={<Dashboard />}/>
-          <Route path='/calendar' element={<Lich/>}/>
           <Route path='/kpis' element={<KPIs/>}/>
           <Route path='/task' element={<Task/>}/>
           <Route path='/setting' element={<Setting/>}/>
@@ -33,7 +31,7 @@ function App() {
           <Route path='/forecast' element={<Forecast/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/' element={<Register/>}/>
-          <Route path='/calendar-mobile' element={<CalendarMobile/>}/>
+          <Route path='/calendar' element={<CalendarMobile/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/home' element={<Home/>}/>
           
